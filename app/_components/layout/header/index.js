@@ -6,6 +6,9 @@ import CartSvg from "../../../../public/assets/cartSvg";
 import Link from 'next/link';
 import { useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
+import { FaArrowRight } from "react-icons/fa";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+
 
 const navItems = [
     { href: '#', label: 'Stud' },
@@ -18,8 +21,8 @@ export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const navContent = <nav className={`flex lg:flex-row ${setIsOpen ? 'flex-col' : 'hidden'}`}>
         {navItems.map((item, index) => (
-            <Link key={index} href={item.href} className="hover:text-gray-700 hover:underline text-[#212121] font-normal lg:py-4 py-2 px-4">
-                {item.label}
+            <Link key={index} href={item.href} className={`hover:text-gray-700 flex justify-between items-center border-b ${index === 0 ? 'border-t' : ''} lg:border-transparent border-black/15 hover:underline text-[#212121] font-normal lg:py-4 py-2 px-4`}>
+                {item.label} <span className="lg:hidden"><MdOutlineKeyboardArrowRight fontSize={22} /></span>
             </Link>
         ))}
     </nav>
@@ -35,8 +38,13 @@ export default function Header() {
                         <div className="max-w-[120px] w-full lg:block hidden" />
 
                         <div className={`flex-col lg:flex-row lg:flex ${isOpen ? 'fixed top-0 bottom-0 left-0 bg-white max-w-[300px] w-full border flex-col duration-300 transition-transform z-10' : 'hidden'} lg:space-x-4`}>
-                            <div className="w-fit ms-auto m-3 lg:hidden" onClick={() => setIsOpen(false)}>
-                                <IoCloseSharp fontSize={24} />
+                            <div className="lg:hidden flex justify-between items-center px-4">
+                                <Link href="/" className="lg:mx-auto w-fit py-4 cursor-pointer">
+                                    <Image src="/assets/logo.png" alt="Logo" className="lg:max-w-max md:max-w-[120px] max-w-[100px]" width={184.3} height={78.01} />
+                                </Link>
+                                <div className="w-fit ms-auto lg:hidden" onClick={() => setIsOpen(false)}>
+                                    <IoCloseSharp fontSize={24} />
+                                </div>
                             </div>
                             {navContent}
                         </div>
