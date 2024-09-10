@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaMinus, FaPlus } from "react-icons/fa";
 
-const titleClass = "text-lg font-bold text-nowrap leading-[33px] text-white";
+const titleClass = "text-base font-bold text-nowrap leading-[33px] text-white";
 
 const Accordion = ({ title, content, isOpen, setIsOpen, id }) => {
     return (

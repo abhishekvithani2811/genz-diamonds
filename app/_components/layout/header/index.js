@@ -24,7 +24,7 @@ export default function Header() {
         ))}
     </nav>
     return (
-        <header className="bg-white text-black">
+        <header className="bg-white text-black lg:static sticky top-0 z-10">
             {isOpen ? <div className="fixed top-0 bottom-0 right-0 left-0 bg-black/30" onClick={() => setIsOpen(false)} /> : null}
             <div className="flex lg:flex-col flex-row lg:justify-center justify-between lg:px-0 px-4">
                 <Link href="/" className="lg:mx-auto w-fit py-4 cursor-pointer">
@@ -34,7 +34,7 @@ export default function Header() {
                     <div className="flex justify-between items-center max-w-[1760px] mx-auto w-full">
                         <div className="max-w-[120px] w-full lg:block hidden" />
 
-                        <div className={`flex-col lg:flex-row lg:flex ${isOpen ? 'fixed top-0 bottom-0 right-0 bg-white max-w-[300px] w-full border flex-col duration-300 transition-transform z-10' : 'hidden'} lg:space-x-4`}>
+                        <div className={`flex-col lg:flex-row lg:flex ${isOpen ? 'fixed top-0 bottom-0 left-0 bg-white max-w-[300px] w-full border flex-col duration-300 transition-transform z-10' : 'hidden'} lg:space-x-4`}>
                             <div className="w-fit ms-auto m-3 lg:hidden" onClick={() => setIsOpen(false)}>
                                 <IoCloseSharp fontSize={24} />
                             </div>
