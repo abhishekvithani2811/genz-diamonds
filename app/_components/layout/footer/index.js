@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaYoutube, FaLinkedinIn, FaTwitter, FaInstagram } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa6";
 import LocationSvg from "../../../../public/assets/locationSvg";
+import FooterAccordion from "./footerAccordion";
 
 const services = [
     { href: '#', label: 'Manufacturing' },
@@ -28,24 +29,73 @@ const aboutUs2 = [
     { href: '#', label: 'Privacy Policy' },
 ];
 
-const titleClass = "text-[22px] font-bold md:mb-[24px] mb-4 text-nowrap leading-[33px]";
+const titleClass = "md:text-[22px] text-lg font-bold md:mb-[24px] mb-4 text-nowrap leading-[33px]";
 const linkClass = "hover:underline text-nowrap font-light";
-const sectionClass = "w-full flex-1 mb-6 md:mb-0";
-const containerClass = "max-w-[1760px] w-full mx-auto px-4";
+const sectionClass = "w-full flex-1 mb-0 md:mb-0";
+const containerClass = "max-w-[1760px] w-full mx-auto md:px-4";
 const footerClass = "bg-[#B4A377] text-white pt-12";
 const textBaseClass = "text-base";
-const ulClass = "text-base lg:space-y-[18px] md:space-y-4 sm:space-y-3 space-y-2";
+const ulClass = "text-base lg:space-y-[18px] md:space-y-4 sm:space-y-3 space-y-2 md:block hidden";
+const accordianClass = "text-base space-y-2 md:hidden block pb-6";
+
+const mdUpClasses = "md:block hidden"
+const mdDownClasses = "md:hidden block"
+
+const OptionsContent = ({ options = [] }) => options.map((item, index) => (
+    <li key={index}>
+        <Link href={item.href} className={linkClass}>
+            {item.label}
+        </Link>
+    </li>
+))
 
 export default function Footer() {
+    const AccordionContentData = [
+        {
+            title: "Our Services",
+            options: services,
+            content: <ul className={accordianClass}>
+                <OptionsContent options={services} />
+            </ul>
+        },
+        {
+            title: "About Us",
+            options: services,
+            content: <ul className={accordianClass}>
+                <OptionsContent options={aboutUs} />
+            </ul>
+        },
+        {
+            title: "About Us",
+            options: services,
+            content: <ul className={accordianClass}>
+                <OptionsContent options={aboutUs} />
+            </ul>
+        },
+    ]
+
+    const MenuContent = () => AccordionContentData?.map(({ title, options }, index) => (
+        <div key={index} className={sectionClass + ' ' + mdUpClasses}>
+            <h2 className={titleClass}>{title}</h2>
+            <ul className={ulClass}>
+                <OptionsContent options={options} />
+            </ul>
+        </div>
+    ))
+
+    const AccordionContent = () => (
+        <FooterAccordion data={AccordionContentData} />
+    )
+
     return (
         <footer className={footerClass}>
             <div className={containerClass}>
-                <div className="flex justify-between flex-wrap gap-4">
-                    <div className="w-full max-w-[400px] mb-6 md:mb-0">
+                <div className="flex justify-between flex-wrap md:flex-row flex-col md:gap-4">
+                    <div className="w-full md:max-w-[400px] pb-6 md:pb-0 px-4 border-b md:border-transparent border-gray-200">
                         <Link href="/" className="mb-2 inline-block">
                             <Image src="/assets/logo-dark.png" alt="Logo" className="lg:max-w-full md:max-w-[180px] max-w-[130px]" width={161.42} height={78} />
                         </Link>
-                        <p className={`${textBaseClass} font-medium mb-5 leading-[26px]`}>At GenZ Diamonds, we're redefining the diamond industry with our lab-grown gems. From crafting and wholesaling to retailing, our diamonds offer unmatched brilliance and a modern touch of sustainability.</p>
+                        <p className={`${textBaseClass} max-w-[400px] font-medium mb-5 leading-[26px]`}>At GenZ Diamonds, we're redefining the diamond industry with our lab-grown gems. From crafting and wholesaling to retailing, our diamonds offer unmatched brilliance and a modern touch of sustainability.</p>
                         <p className={`${textBaseClass} font-semibold mb-3 tracking-[1%]`}>FOLLOW US</p>
                         <div className="flex space-x-4">
                             <a href="#" className="text-white"><FaYoutube /></a>
@@ -55,43 +105,11 @@ export default function Footer() {
                             <a href="#" className="text-white"><FaLinkedinIn /></a>
                         </div>
                     </div>
-                    <div className={sectionClass}>
-                        <h2 className={titleClass}>Our Services</h2>
-                        <ul className={ulClass}>
-                            {services.map((item, index) => (
-                                <li key={index}>
-                                    <Link href={item.href} className={linkClass}>
-                                        {item.label}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
+                    <MenuContent />
+                    <div className={mdDownClasses}>
+                        <AccordionContent />
                     </div>
-                    <div className={sectionClass}>
-                        <h2 className={titleClass}>About Us</h2>
-                        <ul className={ulClass}>
-                            {aboutUs.map((item, index) => (
-                                <li key={index}>
-                                    <Link href={item.href} className={linkClass}>
-                                        {item.label}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div className={sectionClass}>
-                        <h2 className={titleClass}>About Us</h2>
-                        <ul className={ulClass}>
-                            {aboutUs2.map((item, index) => (
-                                <li key={index}>
-                                    <Link href={item.href} className={linkClass}>
-                                        {item.label}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div className="w-full max-w-[304px]">
+                    <div className="w-full max-w-[304px] px-4 md:mt-0 mt-4">
                         <h2 className={titleClass}>Contact Us</h2>
                         <p className={`${textBaseClass} mb-4 flex justify-center flex-1`}><span className="mr-2"><LocationSvg /></span>789 A, 12th Floor, Jewel Heights, 456 Ruby Lane, Crystal View, Grand City, 67890</p>
                         <p className={`${textBaseClass} font-semibold`}>ALEX XENDER</p>

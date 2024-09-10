@@ -1,3 +1,4 @@
+import Link from "next/link";
 import FormInput from "../../layout/formInput";
 
 
@@ -8,7 +9,7 @@ export default function LoginPage() {
                 <h2 className="text-2xl font-semibold md:mb-12 mb-6 text-center text-[#333333] md:text-[32px]">Log in or sign up</h2>
                 <form>
                     <FormInput name="email" label="Email" />
-                    <button type="submit" className="w-full md:py-4 py-3 px-4 bg-[#111111]/25 text-white font-semibold md:text-[20px] text-lg leading-[28.2px] cursor-pointer tracking-wider" disabled>Continue</button>
+                    <Link href='/' type="submit" className="w-full md:py-4 py-3 px-4 bg-[#111111]/25 text-white font-semibold md:text-[20px] text-lg leading-[28.2px] cursor-pointer tracking-wider block text-center">Continue</Link>
                 </form>
                 <div className="md:my-9 my-6 flex items-center opacity-50">
                     <div className="flex-grow border-t-[2px] border-[#E5E5EA]"></div>

@@ -1,7 +1,7 @@
-import LoginPage from "./_components/pages/login";
+import HomePage from "./_components/pages/home";
 
 export default function Home() {
-  return (
-    <LoginPage />
-  );
+    return (
+        <HomePage />
+    );
 }

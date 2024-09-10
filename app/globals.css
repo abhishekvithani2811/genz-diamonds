@@ -87,3 +87,33 @@ footer {
     text-wrap: balance;
   }
 }
+
+@media (min-width: 1024px) {
+  .clip-shape {
+    clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+.font-futura-light {
+  font-family: 'Futura PT Light';
+}
+
+.font-futura-thin {
+  font-family: 'Futura PT Book';
+}
+
+.font-futura-medium {
+  font-family: 'Futura PT Medium';
+}
+
+.font-futura-normal {
+  font-family: 'Futura PT Demi';
+}
+
+.font-futura-bold {
+  font-family: 'Futura PT Bold';
+}
+
+.font-futura-bolder {
+  font-family: 'Futura PT Extra Bold';
+}
