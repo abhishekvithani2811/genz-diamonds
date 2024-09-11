@@ -30,7 +30,7 @@ module.exports = {
       },
       boxShadow: {
         '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
-        'login': '0px 0px 134px 0px #0000000D'
+        'login': 'rgba(0, 0, 0, 0.16) 0px 24px 48px'
       },
       backgroundImage: {
         'hero-pattern': "url('/assets/bg-banner.jpg')",

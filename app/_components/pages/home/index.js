@@ -2,7 +2,7 @@ import BannerSection from "./banner";
 import ExploreSection from "./explore";
 import FavoriteCollection from "./favoriteCollection";
 import LatestCollection from "./latestCollection";
-import NewProductsSection from "./newProducts";
+import NewArrivalProducts from "./newProducts";
 
 export default function HomePage() {
     return (
@@ -10,7 +10,7 @@ export default function HomePage() {
             <BannerSection />
             <ExploreSection />
             <FavoriteCollection />
-            {/* <NewProductsSection /> */}
+            <NewArrivalProducts />
             <LatestCollection />
         </div>
     )

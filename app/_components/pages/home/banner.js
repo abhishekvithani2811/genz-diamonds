@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function BannerSection() {
     return (
-        <div className="flex flex-col relative">
+        <div className="flex flex-col relative bg-white">
             <Image src="/assets/bg-banner.jpg" alt="image" className="w-full h-full object-cover lg:min-h-min min-h-[300px] object-left" width={1920} height={600} />
             <div className="1xl:max-w-[886px] lg:max-w-[650px] w-full clip-shape lg:bg-[#b4a377] lg:min-h-[400px] flex lg:absolute top-0 right-0 bottom-0">
                 <div className="lg:flex flex-col justify-center 1xl:max-w-[585px] 1xl:pl-0 lg:pl-[130px] lg:ml-auto 1xl:mr-14 pl-4 pt-10 pr-4">
@@ -12,7 +12,7 @@ export default function BannerSection() {
                     </p>
                 </div>
             </div>
-            <div className="flex-1 flex lg:px-10 px-4 py-4 bg-white 1xl:max-w-xl max-w-96">
+            <div className="flex-1 flex lg:px-10 px-4 py-4 bg-white 1xl:max-w-xl xl:max-w-2xl max-w-96">
                 <button className="px-6 py-2 mr-4 text-white bg-black flex-1 h-fit">Contact Us</button>
                 <button className="px-6 py-2 text-black border border-black flex-1 h-fit">About Us</button>
             </div>

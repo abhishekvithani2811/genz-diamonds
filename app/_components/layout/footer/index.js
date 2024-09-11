@@ -90,7 +90,7 @@ export default function Footer() {
     return (
         <footer className={footerClass}>
             <div className={containerClass}>
-                <div className="flex justify-between flex-wrap md:flex-row flex-col md:gap-4">
+                <div className="flex justify-between flex-media md:flex-row flex-col md:gap-4">
                     <div className="w-full md:max-w-[400px] pb-6 md:pb-0 px-4 border-b md:border-transparent border-gray-200">
                         <Link href="/" className="mb-2 inline-block">
                             <Image src="/assets/logo-dark.png" alt="Logo" className="lg:max-w-full md:max-w-[180px] max-w-[130px]" width={161.42} height={78} />

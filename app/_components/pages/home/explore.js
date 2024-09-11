@@ -9,11 +9,11 @@ const categories = [
 
 export default function ExploreSection() {
     return (
-        <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
             <div class="flex justify-between items-center">
                 <div>
-                    <h2 class="text-sm font-nomal text-[#c5b090]">SHOP BY CATEGORY</h2>
-                    <h1 class="mt-1 text-3xl font-bold text-gray-900">Explore The Range</h1>
+                    <h2 class="text-sm font-nomal text-[#B4A377]">SHOP BY CATEGORY</h2>
+                    <h1 class="mt-1 text-3xl font-freight-medium text-[#212121]">Explore The Range</h1>
                 </div>
                 <div>
                     <button class="px-6 py-2 text-black border border-black hover:bg-gray-200">View More</button>
@@ -33,9 +33,9 @@ export default function ExploreSection() {
                     </div>
                 ))}
             </div>
-            <div className="mt-8 text-center">
+            {/* <div className="mt-8 text-center">
                 <button className="px-6 py-2 text-black border border-black hover:bg-gray-200">View More</button>
-            </div>
+            </div> */}
         </div>
     )
 }
