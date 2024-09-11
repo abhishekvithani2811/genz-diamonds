@@ -22,7 +22,7 @@ export default function ExploreSection() {
             <div className="mt-12 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                 {categories.map((category) => (
                     <div key={category.name} className="group relative cursor-pointer">
-                        <div className="w-full md:h-80 h-72 bg-gray-200 overflow-hidden group-hover:opacity-75">
+                        <div className="w-full md:h-80 1xl:h-96 h-72 bg-gray-200 overflow-hidden group-hover:opacity-75">
                             <img
                                 src={category.image}
                                 alt={category.name}
