@@ -11,6 +11,7 @@ export default function ProductLisingPage() {
             <MenuBar />
             <SelectedGallary />
             <DiamondFilter />
+            <hr />
             <FilterGallary />   
         </>
     )

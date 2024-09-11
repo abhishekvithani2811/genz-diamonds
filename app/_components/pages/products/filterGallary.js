@@ -35,9 +35,9 @@ export default function FilterGallery() {
 
     return (
 
-        <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="pb-16 px-4 sm:px-6 lg:px-8 bg-white">
 
-            <div className="mt-12 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-6 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                 {products.map(product => (
                     <div key={product.id} className=" rounded overflow-hidden relative">
                         <div className="absolute top-0 right-1 p-2">
@@ -50,18 +50,18 @@ export default function FilterGallery() {
                                 fontWeight: '400',
                                 lineHeight: '30px',
                             }}>{product.name}</div>
-                            <p className="text-gray-700 text-base">
+                            <p className="text-[#8E8E93] text-sm font-bold">
                                 From {product.price}
                             </p>
                         </div>
                         <div className="pr-6 mb-2 flex items-center space-x-2">
-                            <span className="text-sm font-semibold">Metal</span>
+                            <span className="text-sm text-[#8E8E93] ">Metal</span>
                             <button className="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center">
                                 <span className="text-xs">PT</span>
                             </button>
-                            <span className="w-4 h-4 rounded-full bg-yellow-200"></span>
-                            <span className="w-4 h-4 rounded-full bg-yellow-300"></span>
-                            <span className="w-4 h-4 rounded-full bg-yellow-400"></span>
+                            <span className="w-6 h-6 rounded-full bg-yellow-200"></span>
+                            <span className="w-6 h-6 rounded-full bg-yellow-300"></span>
+                            <span className="w-6 h-6 rounded-full bg-yellow-400"></span>
                         </div>
                     </div>
                 ))}
