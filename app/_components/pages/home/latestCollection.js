@@ -14,7 +14,8 @@ export default function LatestCollection() {
                     <div div class="bg-black bg-opacity-0 group-hover:bg-opacity-30 flex items-center opacity-100 transition-opacity duration-300 h-full w-full px-5 py-9 3xl:min-h-96 2xl:min-h-80 1xl:min-h-80 ">
                         <div class="text-white max-w-[40%]">
                             <h2 class="text-2xl font-medium font-freight-medium">{item?.title}</h2>
-                            <p class="mt-2">{item?.desc}</p>
+
+                            <p class="mt-2  font-futura-thin">{item?.desc}</p>
                             <button class="mt-4 px-4 py-2 text-white border border-white hover:bg-gray-300/50">View More</button>
                         </div>
                     </div>
