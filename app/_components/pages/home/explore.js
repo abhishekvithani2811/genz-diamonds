@@ -16,7 +16,7 @@ export default function ExploreSection() {
                     <h1 class="mt-1 text-3xl font-freight-medium text-[#212121]">Explore The Range</h1>
                 </div>
                 <div>
-                    <button class="px-6 py-2 text-black border border-black hover:bg-gray-200">View More</button>
+                    <button class="px-6 py-2 text-nowrap text-black border border-black hover:bg-gray-200">View More</button>
                 </div>
             </div>
             <div className="mt-12 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
@@ -29,7 +29,7 @@ export default function ExploreSection() {
                                 className="w-full h-full object-center object-cover"
                             />
                         </div>
-                        <h3 className="mt-4 text-base font-semibold text-gray-900">{category.name}</h3>
+                        <h3 className="mt-1 text-xl font-semibold text-gray-900" style={{ fontFamily: 'Futura PT', fontWeight: '400', lineHeight: '36px' }}>{category.name}</h3>
                     </div>
                 ))}
             </div>

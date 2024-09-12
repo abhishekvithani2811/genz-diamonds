@@ -23,6 +23,7 @@ export default function SelectedGallary() {
             <div className="py-8 px-4 sm:px-6 lg:px-8 bg-white">
 
                 <div className="mt-12 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+                    
                     {categories.map((category, index) => (
                         <div key={category.name} className="group relative cursor-pointer">
                             <div className="w-full  bg-gray-200 overflow-hidden group-hover:opacity-75 relative">

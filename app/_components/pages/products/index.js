@@ -4,6 +4,7 @@ import MenuBar from './menubar';
 import SelectedGallary from './selectedGallary';
 import DiamondFilter from './diamondFilter';
 import FilterGallary from './filterGallary';
+import RecentlyViewed from './recently';
 
 export default function ProductLisingPage() {
     return (
@@ -12,7 +13,8 @@ export default function ProductLisingPage() {
             <SelectedGallary />
             <DiamondFilter />
             <hr />
-            <FilterGallary />   
+            <FilterGallary />  
+            <RecentlyViewed />
         </>
     )
 }
