@@ -11,6 +11,7 @@ export default function HomePage() {
             <ExploreSection />
             <FavoriteCollection />
             <NewArrivalProducts />
+            
             <LatestCollection />
         </div>
     )
