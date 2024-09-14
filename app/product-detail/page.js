@@ -1,6 +1,7 @@
 // src/components/ProductDetails.js
 import React from 'react';
 import ProductList from '../_components/pages/product-list';
+import DetailCard from '../_components/pages/globleCard';
 
 const ProductDetails = () => {
     return (
@@ -114,6 +115,7 @@ const ProductDetails = () => {
                 </div>
                 <ProductList />
             </div>
+            <DetailCard/>
         </div>
     );
 };
