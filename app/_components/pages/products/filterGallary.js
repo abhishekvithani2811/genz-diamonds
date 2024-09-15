@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function FilterGallery() {
 
@@ -60,7 +61,7 @@ export default function FilterGallery() {
         <div className=" px-4 sm:px-6 lg:px-8 bg-white">
             <div className="mt-6 grid gap-6 grid-cols-2 sm:grid-cols-2 lg:grid-cols-4">
                 {products.map(product => (
-                    <div key={product.id} className=" rounded overflow-hidden relative">
+                    <Link href="/product-detail" key={product.id} className=" rounded overflow-hidden relative">
                         {heartIcon()}
                         <Image width={300} height={300} className="w-full" src={product.imageUrl} alt={product.alt} />
                         <div className="pr-6 sm:py-4 py-2">
@@ -73,7 +74,7 @@ export default function FilterGallery() {
                             </p>
                         </div>
                         {colorSelection()}
-                    </div>
+                    </Link>
                 ))}
             </div>
             <div className=" bg-white">
@@ -81,7 +82,7 @@ export default function FilterGallery() {
                     <div className="lg:grid lg:grid-cols-4">
                         <div className="col-span-2 grid grid-cols-2 gap-6">
                             {products.map(product => (
-                                <div key={product.id} className="">
+                                <Link href="/product-detail" key={product.id} className="">
                                     <div className="rounded overflow-hidden relative">
                                         {heartIcon()}
                                         <Image width={300} height={300} className="w-full" src={product.imageUrl} alt={product.alt} />
@@ -96,7 +97,7 @@ export default function FilterGallery() {
                                         </div>
                                         {colorSelection()}
                                     </div>
-                                </div>
+                                </Link>
                             ))}
                         </div>
                         <div className="col-span-2 relative flex justify-center pb-2 sm:px-3">
@@ -108,7 +109,7 @@ export default function FilterGallery() {
             </div>
             <div className="mt-6 grid gap-6 grid-cols-2 sm:grid-cols-2 lg:grid-cols-4">
                 {products.map(product => (
-                    <div key={product.id} className=" rounded overflow-hidden relative">
+                    <Link href="/product-detail" key={product.id} className=" rounded overflow-hidden relative">
                         {heartIcon()}
                         <Image width={300} height={300} className="w-full" src={product.imageUrl} alt={product.alt} />
                         <div className="pr-6 sm:py-4 py-2">
@@ -121,7 +122,7 @@ export default function FilterGallery() {
                             </p>
                         </div>
                         {colorSelection()}
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div>

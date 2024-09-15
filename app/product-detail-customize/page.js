@@ -11,10 +11,11 @@ const SIDE_DATA = [
     {
         title: 'Ask Query',
         buttons: [
-            'Customer',
+            'Customize',
             'Return & Policy',
-            'Order',
-            'Mail'
+            'Chat',
+            'Mail',
+            'Pdf',
         ]
     },
     {
@@ -45,8 +46,8 @@ const productDetails = {
     originalPrice: "3000.00",
     metals: ["9K Gold", "10K Gold", "18K Gold", "Silver", "Platinum"],
     tones: ["White Gold", "Yellow Gold"],
+    type: ["Labl", "Diamond Recommendations"],
     stoneSelections: ["Find Specific Diamond", "Diamond Recommendations"],
-    type: ["Lab", "Diamond Recommendations"],
     totalCarat: ["1.00"],
     color: ["G"],
     clarity: ["SI1/SI2"],
@@ -56,13 +57,13 @@ const productDetails = {
     engravingPlaceholder: "Enter engraving text",
     deliveryInfo: "Delivered in 2-4 weeks approx. Check your P.O. Box",
     stockInfo: "Please check again if STOCK is available for 2-3 day delivery.",
-    variant: "default"
+    variant: "second"
 };
 
 const cards = {
     title: "Ready Stock for Quick Delivery",
-    subtitle: "Store Jewelry",
-    data: Array.from({ length: 8 })
+    subtitle: "Instant Stock, Fast Delivery",
+    data: Array.from({ length: 4 })
 }
 
 const ProductDetails = () => {

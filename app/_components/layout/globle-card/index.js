@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Button from "../button";
 
 function GlobleCard() {
 
@@ -68,8 +69,8 @@ function GlobleCard() {
                 </div>
                 <p className="flex justify-center items-center text-sm mb-4 font-futura-thin text-[#B4A377]">Delivery in 2-3 Working Days</p>
                 <div className="flex space-x-4">
-                    <button className="flex-1 border border-black text-dark py-2 hover:bg-black hover:text-white">View Details</button>
-                    <button className="flex-1 bg-black text-white py-2 hover:bg-white hover:text-black hover:border hover:border-black">Add to Cart</button>
+                    <Button className="flex-1">View Details</Button>
+                    <Button variant="primary" className="flex-1">Add to Cart</Button>
                 </div>
             </div>
         </div>

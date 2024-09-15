@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { FaPlus } from 'react-icons/fa';
+import Link from 'next/link';
 
 export default function DiamondFilter() {
     return (
@@ -14,12 +15,12 @@ export default function DiamondFilter() {
                             <div className="flex space-x-2 sm:space-x-4">
                                 {/* Repeated for each icon */}
                                 {[1, 2, 3, 4, 5, 6, 7].map((item) => (
-                                    <div key={item} className="flex items-center gap-2">
+                                    <Link href="/product-detail" key={item} className="flex items-center gap-2">
                                         <div className='flex flex-col items-center'>
                                             <Image src={`/assets/filterDiamond/${item}.png`} width={36} height={36} />
                                             <span className="text-xs sm:text-sm">Lorem</span>
                                         </div>
-                                    </div>
+                                    </Link>
                                 ))}
                             </div>
                             <button className="p-2 border rounded-lg bg-gray-200">
