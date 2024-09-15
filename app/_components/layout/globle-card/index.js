@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Button from "../button";
+import Link from "next/link";
 
 function GlobleCard() {
 
@@ -69,7 +70,9 @@ function GlobleCard() {
                 </div>
                 <p className="flex justify-center items-center text-sm mb-4 font-futura-thin text-[#B4A377]">Delivery in 2-3 Working Days</p>
                 <div className="flex space-x-4">
-                    <Button className="flex-1">View Details</Button>
+                    <Link href="/product-detail-customize">
+                        <Button className="flex-1">View Details</Button>
+                    </Link>
                     <Button variant="primary" className="flex-1">Add to Cart</Button>
                 </div>
             </div>

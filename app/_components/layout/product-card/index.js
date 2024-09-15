@@ -1,4 +1,5 @@
 // src/components/ProductCard.js
+import Link from 'next/link';
 import React from 'react';
 
 const ProductCard = ({ product }) => {
@@ -23,7 +24,10 @@ const ProductCard = ({ product }) => {
                 </ul>
             </div>
             <div className="flex justify-between mt-4">
-                <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg">View Details</button>
+                <Link href="/product-detail-customize">
+                    <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg">View Details</button>
+                </Link>
+
                 <button className="px-4 py-2 bg-black text-white rounded-lg">Add to Cart</button>
             </div>
         </div>
