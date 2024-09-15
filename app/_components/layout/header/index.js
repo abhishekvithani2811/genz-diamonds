@@ -9,35 +9,175 @@ import { IoCloseSharp } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import Stud from "./stud";
+import Ring from "./ring";
+import FineJewelry from "./fineJewelry";
+import Diamond from "./diamond";
 
 const STUD = [
-    { category: 'By Style', items: ['Solitaire', 'Halo', 'Shoulder Set', 'Vintage', 'Side Stone', 'Promise', '2 Stone', '3 Stone', '4 Stone', '5 Stone', 'Bridal Set', 'Eternity Rings', 'Anniversary', 'Dress', 'Cluster', 'Wishbone', 'Cocktail', 'Cross Over', 'Designer'] },
-    { category: 'By Diamonds', items: ['Round', 'Princess', 'Oval', 'Pear', 'Marquise', 'Emerald', 'Heart', 'Asscher'] },
-    { category: 'By Metal', items: ['Platinum', 'Silver', '18k White Gold', '9k White Gold', '18k Yellow Gold', '9k Yellow Gold', '18k Rose Gold', '9k Rose Gold'] },
-]
+    {
+        category: 'By Style',
+        items: [
+            { name: 'Halo', icon: '/assets/megaMenu/icons/1stColumn/1.png' },
+            { name: 'Hoop', icon: '/assets/megaMenu/icons/1stColumn/2.png' },
+            { name: 'Drop', icon: '/assets/megaMenu/icons/1stColumn/3.png' },
+            { name: 'Circle of Life', icon: '/assets/megaMenu/icons/1stColumn/4.png' },
+            { name: 'Journey', icon: '/assets/megaMenu/icons/1stColumn/5.png' },
+            { name: 'Star', icon: '/assets/megaMenu/icons/1stColumn/6.png' },
+            { name: 'Flower', icon: '/assets/megaMenu/icons/1stColumn/7.png' },
+            { name: 'Fashion', icon: '/assets/megaMenu/icons/1stColumn/8.png' }
+        ]
+    },
+    {
+        category: 'By Diamonds',
+        items: [
+            { name: 'Round', icon: '/assets/megaMenu/icons/2ndColumn/1.png' },
+            { name: 'Princess', icon: '/assets/megaMenu/icons/2ndColumn/2.png' },
+            { name: 'Oval', icon: '/assets/megaMenu/icons/2ndColumn/3.png' },
+            { name: 'Pear', icon: '/assets/megaMenu/icons/2ndColumn/4.png' },
+            { name: 'Marquise', icon: '/assets/megaMenu/icons/2ndColumn/4.png' },
+            { name: 'Emerald', icon: '/assets/megaMenu/icons/2ndColumn/5.png' },
+            { name: 'Heart', icon: '/assets/megaMenu/icons/2ndColumn/6.png' },
+            { name: 'Asscher', icon: '/assets/megaMenu/icons/2ndColumn/7.png' }
+        ]
+    },
+    {
+        category: 'By Metal',
+        items: [
+            { name: 'Platinum', icon: '/assets/megaMenu/icons/3rdColumn/1.png' },
+            { name: '18k White Gold', icon: '/assets/megaMenu/icons/3rdColumn/2.png' },
+            { name: '9k White Gold', icon: '/assets/megaMenu/icons/3rdColumn/3.png' },
+            { name: '18k Yellow Gold', icon: '/assets/megaMenu/icons/3rdColumn/4.png' },
+            { name: '9k Yellow Gold', icon: '/assets/megaMenu/icons/3rdColumn/5.png' },
+            { name: '18k Rose Gold', icon: '/assets/megaMenu/icons/3rdColumn/6.png' },
+            { name: '9k Rose Gold', icon: '/assets/megaMenu/icons/3rdColumn/7.png' }
+        ]
+    }
+];
+
+
+
+const RINGDATA = [
+    {
+        category: "By Style",
+        items: [
+            { name: "Solitaire", icon: "/assets/megaMenu/ring/1.png" },
+            { name: "Halo", icon: "/assets/megaMenu/ring/2.png" },
+            { name: "Shoulder Set", icon: "/assets/megaMenu/ring/3.png" },
+            { name: "Vintage", icon: "/assets/megaMenu/ring/4.png" },
+            { name: "Side Stone", icon: "/assets/megaMenu/ring/5.png" },
+            { name: "Promise", icon: "/assets/megaMenu/ring/6.png" },
+            { name: "2 Stone", icon: "/assets/megaMenu/ring/7.png" },
+            { name: "3 Stone", icon: "/assets/megaMenu/ring/8.png" },
+            { name: "4 Stone", icon: "/assets/megaMenu/ring/9.png" },
+            { name: "5 Stone", icon: "/assets/megaMenu/ring/10.png" }
+        ]
+    },
+    {
+        items: [
+            { name: "Solitaire", icon: "/assets/megaMenu/ring/1.png" },
+            { name: "Halo", icon: "/assets/megaMenu/ring/2.png" },
+            { name: "Shoulder Set", icon: "/assets/megaMenu/ring/3.png" },
+            { name: "Vintage", icon: "/assets/megaMenu/ring/4.png" },
+            { name: "Side Stone", icon: "/assets/megaMenu/ring/5.png" },
+            { name: "Promise", icon: "/assets/megaMenu/ring/6.png" },
+            { name: "2 Stone", icon: "/assets/megaMenu/ring/7.png" },
+            { name: "3 Stone", icon: "/assets/megaMenu/ring/8.png" },
+            { name: "4 Stone", icon: "/assets/megaMenu/ring/9.png" },
+            { name: "5 Stone", icon: "/assets/megaMenu/ring/10.png" }
+        ]
+    },
+    {
+        category: 'By Diamonds',
+        items: [
+            { name: 'Round', icon: '/assets/megaMenu/icons/2ndColumn/1.png' },
+            { name: 'Princess', icon: '/assets/megaMenu/icons/2ndColumn/2.png' },
+            { name: 'Oval', icon: '/assets/megaMenu/icons/2ndColumn/3.png' },
+            { name: 'Pear', icon: '/assets/megaMenu/icons/2ndColumn/4.png' },
+            { name: 'Marquise', icon: '/assets/megaMenu/icons/2ndColumn/4.png' },
+            { name: 'Emerald', icon: '/assets/megaMenu/icons/2ndColumn/5.png' },
+            { name: 'Heart', icon: '/assets/megaMenu/icons/2ndColumn/6.png' },
+            { name: 'Asscher', icon: '/assets/megaMenu/icons/2ndColumn/7.png' }
+        ]
+    },
+    {
+        category: 'By Metal',
+        items: [
+            { name: 'Platinum', icon: '/assets/megaMenu/icons/3rdColumn/1.png' },
+            { name: '18k White Gold', icon: '/assets/megaMenu/icons/3rdColumn/2.png' },
+            { name: '9k White Gold', icon: '/assets/megaMenu/icons/3rdColumn/3.png' },
+            { name: '18k Yellow Gold', icon: '/assets/megaMenu/icons/3rdColumn/4.png' },
+            { name: '9k Yellow Gold', icon: '/assets/megaMenu/icons/3rdColumn/5.png' },
+            { name: '18k Rose Gold', icon: '/assets/megaMenu/icons/3rdColumn/6.png' },
+            { name: '9k Rose Gold', icon: '/assets/megaMenu/icons/3rdColumn/7.png' }
+        ]
+    }
+];
+
+const FINE_JEWELRY_DATA = [
+    {
+        category: "Categories",
+        items: [
+            { name: "Rings" },
+            { name: "Earrings" },
+            { name: "Necklaces" },
+            { name: "Bracelets" }
+        ]
+    },
+    {
+        category: "Gifting",
+        items: [
+            { name: "Hot Seller" },
+            { name: "Most Popular" },
+            { name: "New Arrival" },
+            { name: "Under $ 500" },
+            { name: "Under $ 1000" }
+        ]
+    },
+    {
+        category: "Collections",
+        items: [
+            { name: "Engagement" },
+            { name: "Wedding" },
+            { name: "Diamond" }
+        ]
+    },
+    {
+        category: "Occasion",
+        items: [
+            { name: "Gift" },
+            { name: "Anniversary" },
+            { name: "Birthday" },
+            { name: "Mother's Day" }
+        ]
+    }
+];
 
 const navItems = [
     { href: '/stud', label: 'Stud' },
-    { href: '#', label: 'Diamond' },
-    { href: '#', label: 'Jewelry' },
+    { href: '/ring', label: 'Ring' },
+    { href: '/diamond', label: 'Diamond' },
+    { href: '/fineJewelry', label: 'Fine Jewelry' },
     { href: '#', label: 'Made to Order' },
 ];
 
 const subMenuItems = {
-    "/stud": <Stud data={STUD} />
+    "/stud": <Stud data={STUD} />,
+    "/ring": <Ring data={RINGDATA} />,
+    "/fineJewelry": <FineJewelry data={FINE_JEWELRY_DATA} />,
+    "/diamond": <Diamond />
 }
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
-    const navContent = <nav className={`flex lg:flex-row ${setIsOpen ? 'flex-col' : 'hidden'}`}>
+    const navContent = <nav className={`flex lg:flex-row w-full ${setIsOpen ? 'flex-col' : 'hidden'}`}>
         {navItems.map((item, index) => (
-            <div className="group">
-                <Link key={index} href={item.href} className={`hover:text-gray-700 flex justify-between items-center border-b ${index === 0 ? 'border-t' : ''} lg:border-transparent border-black/15 hover:underline text-[#212121] font-normal lg:py-4 py-2 px-4`}>
+            <div className="group relative">
+                <Link key={index} href={item.href} className={`hover:text-gray-700 flex justify-between items-center     ${index === 0 ? 'b' : ''} border-black/15 hover:underline hover:underline-offset-4 hover:decoration-[#BD9851] hover:text-[#BD9851] text-[#212121] font-normal lg:py-4 py-2 px-4`}>
                     {item.label} <span className="lg:hidden"><MdOutlineKeyboardArrowRight fontSize={22} /></span>
                 </Link>
                 {
                     Boolean(subMenuItems[item.href]) ? (
-                        <div className="z-[1] fixed left-0 right-0 hidden group-hover:block shadow-lg p-4 transition-all duration-300 ease-in-out bg-white max-h-[50vh] overflow-y-auto" >
+                        <div className="z-[10] fixed left-0 right-0 hidden group-hover:block shadow-lg p-4 transition-all duration-300 ease-in-out bg-white max-h-[70vh] overflow-y-auto" >
                             {subMenuItems[item.href]}
                         </div>
                     ) : null

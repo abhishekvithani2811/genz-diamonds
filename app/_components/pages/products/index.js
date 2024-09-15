@@ -13,7 +13,7 @@ export default function ProductLisingPage() {
             <SelectedGallary />
             <DiamondFilter />
             <hr />
-            <FilterGallary />  
+            <FilterGallary />
             <RecentlyViewed />
         </>
     )
