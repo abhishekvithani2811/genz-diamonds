@@ -157,3 +157,19 @@ button {
   font-family: "Futura PT Medium";
   font-weight: 400;
 }
+
+input::-webkit-slider-thumb {
+  background: #00fd0a;
+}
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 9;
+}
+.sticky-left {
+  position: sticky;
+  left: 0;
+  background-color: white;
+  z-index: 9;
+}

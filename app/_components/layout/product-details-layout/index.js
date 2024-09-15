@@ -10,7 +10,7 @@ export default function ProductDetailsLayout({ children, images = [], productDet
     subtitle: ""
 } }) {
     return (
-        <div className="container mx-auto p-4">
+        <div className="p-4">
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
                 {/* Left Column */}
                 <div className="w-full col-span-3 bg-white">

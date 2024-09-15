@@ -9,7 +9,7 @@ function GlobleCard() {
         )
     }
     return (
-        <div className="max-w-sm mx-auto bg-white border border-[#F2F2F7]  -lg">
+        <div className="w-full bg-white border border-[#F2F2F7]">
             {/* Upper section with image, SKU, and price */}
             <Image width={400} height={400} className="w-full object-cover h-auto" src="/assets/latest/1.png" alt="Elegant Diamond Ring" />
             <div className="text-center mt-4 flex flex-col justify-start items-start px-6 gap-2">
