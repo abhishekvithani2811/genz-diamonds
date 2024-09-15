@@ -53,7 +53,7 @@ export default function CompareCardMain({ handleCheck, selected = false }) {
                 </div>
                 <div className="flex space-x-4 text-nowrap">
                     <Button className="flex-1 text-sm">View Details</Button>
-                    <Button variant="primary" className="flex-1 text-sm">Add to Cart</Button>
+                    <Button variant="primary" className="flex-1 text-sm" onClick={() => router.push('/cart')}>Add to Cart</Button>
                 </div>
             </div>
         </div>

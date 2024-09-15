@@ -29,14 +29,10 @@ const SIDE_DATA = [
 ]
 
 const images = [
-    "https://via.placeholder.com/100",
-    "https://via.placeholder.com/100",
-    "https://via.placeholder.com/100",
-    "https://via.placeholder.com/100",
-    "https://via.placeholder.com/100",
-    "https://via.placeholder.com/100",
-    "https://via.placeholder.com/100",
-    "https://via.placeholder.com/100"
+    "/assets/compare/4.png",
+    "/assets/compare/2.png",
+    "/assets/compare/3.png",
+    "/assets/compare/2.png",
 ];
 
 const productDetails = {

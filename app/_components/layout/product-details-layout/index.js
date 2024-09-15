@@ -11,15 +11,14 @@ export default function ProductDetailsLayout({ children, images = [], productDet
 } }) {
     return (
         <div className="p-4">
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-4 md:gap-4">
                 {/* Left Column */}
                 <div className="w-full col-span-3 bg-white">
                     <div className="flex flex-col lg:flex-row">
                         {/* Product Images */}
                         <div className="w-full lg:w-1/2">
-                            <img src="https://via.placeholder.com/300" alt="Product Image" className="w-full h-auto object-cover rounded-lg mb-4" />
+                            <img src="/assets/compare/3.png" alt="Product Image" className="w-full h-auto object-cover rounded-lg mb-4" />
                             <ImageCarousel images={images} />
-
                         </div>
                         {/* Product Details */}
                         <div className="w-full lg:w-1/2 lg:pl-6">

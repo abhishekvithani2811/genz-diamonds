@@ -6,6 +6,8 @@ import SectionTitle from './section-title';
 import PriceDisplay from './price-display';
 import OptionSelector from './option-selector';
 import DropdownSelector from './dropdown-selector';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const ProductDetailsForm = ({
     title,
@@ -27,6 +29,8 @@ const ProductDetailsForm = ({
     stockInfo,
     variant = 'default'
 }) => {
+    const navigate = useRouter(); // Initialize navigate function
+
     const [selectedValues, setSelectedValues] = useState({
         metal: metals[0] ?? '',
         tone: tones[0] ?? '',
@@ -40,6 +44,15 @@ const ProductDetailsForm = ({
         type: type[0] ?? '',
         shape: stoneSelections[0] ?? '',
     });
+    const underLine = ({ width }) => {
+        return (
+            <hr className="pb-2" style={{ border: 'none', height: '2px', backgroundColor: 'transparent', borderTop: '2px dashed #F2F2F7', width: width, margin: 'auto' }} />
+        )
+    }
+    const handleAddToCart = () => {
+        // Logic to handle adding to cart (if any)
+        navigate('/check-out'); // Navigate to cart page
+    };
 
     return variant === 'second' ? (
         <div className="w-full">
@@ -54,7 +67,7 @@ const ProductDetailsForm = ({
                     <PriceDisplay price={price} originalPrice={originalPrice} variant={variant} />
                 </div>
             </div>
-            <hr className="border-t border-dashed border-gray-300 my-4" />
+            <hr className="border-t border-dashed border-gray-300 mb-4" />
             <div className="grid grid-cols-2 gap-2 items-center">
                 <h1 className="text-lg font-semibold font-futura-medium">Band</h1>
                 <h1 className="text-lg font-semibold font-futura-medium">Band</h1>
@@ -213,14 +226,16 @@ const ProductDetailsForm = ({
             </div>
             <hr className="border-t border-dashed border-gray-300 my-4" />
             <div className="mb-4">
+
                 <label className="block text-[#8E8E93] mb-2"><span className="font-futura-medium underline text-lg text-[#B4A377] font-medium">Add Engraving</span> (Optional)</label>
             </div>
-            <Button variant="primary" className="flex-1 block w-full">Add to Cart</Button>
+            <Button variant="primary" className="flex-1 block w-full" onClick={() => router.push('/cart')}>Add to Cart</Button>
         </div>
     ) : <div className="w-full">
         <SectionTitle title={title} subtitle={`(SKU: ${sku})`} />
         <p className="text-gray-500 font-futura-medium text-lg text-[#8E8E93]">From</p>
         <PriceDisplay price={price} originalPrice={originalPrice} />
+        {underLine({ width: '98%' })}
         <OptionSelector
             label="Metal"
             options={metals}
@@ -239,8 +254,8 @@ const ProductDetailsForm = ({
             selectedOption={selectedValues.stoneSelection}
             onSelect={(stoneSelection) => setSelectedValues({ ...selectedValues, stoneSelection })}
         />
-        <hr className="border-t border-dashed border-gray-300 my-4" />
-        <div className="mb-4 grid grid-cols-5 gap-4">
+        {underLine({ width: '98%' })}
+        <div className="mb-4 grid grid-cols-3 md:grid-cols-5 gap-4">
             <DropdownSelector
                 label="Total Carat"
                 options={totalCarat}
@@ -279,9 +294,12 @@ const ProductDetailsForm = ({
             onSelect={(size) => setSelectedValues({ ...selectedValues, size })}
         />
         <div className="mb-4">
+            <label className="block text-[#8E8E93] mb-2"><span className="font-futura-medium underline text-lg  font-medium">Show more sizes</span></label>
             <label className="block text-[#8E8E93] mb-2"><span className="font-futura-medium underline text-lg text-[#B4A377] font-medium">Add Engraving</span> (Optional)</label>
         </div>
-        <Button variant="primary" className="flex-1 block w-full">Add to Cart</Button>
+        <Link href="/cart">
+            <Button variant="primary" className="flex-1 block w-full" onClick={handleAddToCart}>Add to Cart</Button>
+        </Link>
         <p className="text-[#7A7A7A] text-base mt-4 flex items-center"><TbTruckDelivery className="mr-2" />{deliveryInfo}</p>
         <p className="text-[#7A7A7A] text-base mt-1">{stockInfo}</p>
     </div>;

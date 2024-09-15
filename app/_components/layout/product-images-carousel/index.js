@@ -8,11 +8,12 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 
 export default function ImageCarousel({ images }) {
+    console.log(images);
     const [swiperInstance, setSwiperInstance] = useState(null);
 
     return (
         <div className="flex items-center space-x-2">
-            <button onClick={() => swiperInstance?.slidePrev()} className="">
+            <button onClick={() => swiperInstance?.slidePrev()} className="hidden sm:inline-flex">
                 <MdNavigateBefore fontSize={20} />
             </button>
             <Swiper
@@ -41,7 +42,7 @@ export default function ImageCarousel({ images }) {
                     </SwiperSlide>
                 ))}
             </Swiper>
-            <button onClick={() => swiperInstance?.slideNext()} className="">
+            <button onClick={() => swiperInstance?.slideNext()} className="hidden sm:inline-flex">
                 <MdNavigateNext fontSize={20} />
             </button>
         </div>
