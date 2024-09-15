@@ -10,7 +10,7 @@ export default function CartPage() {
                             <div class="flex justify-between">
                                 <h2 class="md:text-2xl md:font-semibold mb-4 text-lg font-normalmb-4" style={{ fontFamily: 'Futura PT', lineHeight: '24px', textAlign: 'left' }}>Contact Information</h2>
                                 <div class="flex justify-end mb-6">
-                                    <a href="#" class=" underline underline-offset-2 text-futuraPT font-normal text-nowrap	 text-xs md:text-base">Sign In / Register</a>
+                                    <a href="/login" class=" underline underline-offset-2 text-futuraPT font-normal text-nowrap	 text-xs md:text-base">Sign In / Register</a>
                                 </div>
                             </div>
                             <label class="block   text-sm font-normal font-futura-thin text-[#AAAAAA] ">Email Address (for sending the order confirmation) *</label>

@@ -33,7 +33,7 @@ export default function ImageCarousel({ images }) {
                 modules={[Navigation]}
                 loop
                 onSwiper={setSwiperInstance}
-                className="ImageCarousel"
+
             >
                 {images.map((image, index) => (
                     <SwiperSlide key={index}>

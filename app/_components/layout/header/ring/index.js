@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Ring({ data }) {
     return (
         <div className="flex justify-between md:px-10 mb-14">
-            <div className="grid grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {data.map((subMenu, subIndex) => (
                     <div key={subIndex}>
                         {subMenu.category ? (<h3 className="font-medium mb-2 Futura PT medium">{subMenu.category}</h3>) : (

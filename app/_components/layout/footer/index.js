@@ -6,27 +6,27 @@ import LocationSvg from "../../../../public/assets/locationSvg";
 import FooterAccordion from "./footerAccordion";
 
 const services = [
-    { href: '#', label: 'Manufacturing' },
-    { href: '#', label: 'Grading' },
-    { href: '#', label: 'Benefits' },
-    { href: '#', label: 'Products' },
-    { href: '#', label: 'GIA Certified Diamonds' },
+    { href: '/products', label: 'Manufacturing' },
+    { href: '/products', label: 'Grading' },
+    { href: '/products', label: 'Benefits' },
+    { href: '/products', label: 'Products' },
+    { href: '/products', label: 'GIA Certified Diamonds' },
 ];
 
 const aboutUs = [
-    { href: '#', label: 'About Us' },
-    { href: '#', label: 'Media' },
-    { href: '#', label: 'Events' },
-    { href: '#', label: 'Gallery' },
-    { href: '#', label: 'Privacy Policy' },
+    { href: '/products', label: 'About Us' },
+    { href: '/products', label: 'Media' },
+    { href: '/products', label: 'Events' },
+    { href: '/products', label: 'Gallery' },
+    { href: '/products', label: 'Privacy Policy' },
 ];
 
 const aboutUs2 = [
-    { href: '#', label: 'About Us' },
-    { href: '#', label: 'Media' },
-    { href: '#', label: 'Events' },
-    { href: '#', label: 'Gallery' },
-    { href: '#', label: 'Privacy Policy' },
+    { href: '/products', label: 'About Us' },
+    { href: '/products', label: 'Media' },
+    { href: '/products', label: 'Events' },
+    { href: '/products', label: 'Gallery' },
+    { href: '/products', label: 'Privacy Policy' },
 ];
 
 const titleClass = "md:text-[22px] text-lg font-bold md:mb-[24px] mb-4 text-nowrap leading-[33px]";

@@ -27,7 +27,7 @@ export default function Diamond() {
     }
     return (
         <>
-            <div className="text-xl md:px-10  flex items-center font-futuraPT font-normal text-black">
+            <div className="text-xl md:px-10 flex items-center font-futuraPT font-normal text-black">
                 <div>
                     Find your unique diamond
                 </div>
@@ -36,16 +36,16 @@ export default function Diamond() {
             {underline()}
             <div className="flex justify-between md:px-10 mb-8">
                 <div className="flex flex-row w-full gap-2">
-                    <div className="w-1/12">
+                    <div className="lg:w-1/12">
                         <h2 className="font-futura-medium text-lg mb-4">Begin Exploring</h2>
                         <ul>
                             <li className="mb-2 font-futura-thin text-sm bg-[#F9F9F9] p-2">Certified</li>
                             <li className="font-futura-thin text-sm p-2">Pairs</li>
                         </ul>
                     </div>
-                    <div className="w-11/12">
+                    <div className="lg:w-11/12">
                         <h2 className="font-futura-medium text-lg mb-4">Find your certified diamonds</h2>
-                        <div className="grid grid-cols-9 gap-4">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-9 gap-4">
                             {items.map((shape, index) => (
                                 <div key={index} className="flex flex-col items-center p-4 bg-[#F9F9F9] rounded shadow-sm">
                                     <img src={shape.icon} alt={shape.name} className="w-24 h-24 mb-2" />

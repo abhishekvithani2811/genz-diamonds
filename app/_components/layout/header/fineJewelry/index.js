@@ -13,11 +13,11 @@ export default function FineJewelry({ data }) {
                 <div>
                     Browse all jewelry
                 </div>
-                    <Image src={'/assets/megaMenu/ring/21.svg'} width={24} height={24} />
+                <Image src={'/assets/megaMenu/ring/21.svg'} width={24} height={24} />
             </div>
             {underline()}
             <div className="flex justify-between md:px-10 mb-14">
-                <div className="grid grid-cols-4 gap-12">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
                     {data.map((subMenu, subIndex) => (
                         <div key={subIndex}>
                             <h3 className="font-medium mb-2 Futura PT medium">{subMenu.category}</h3>

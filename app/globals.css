@@ -143,14 +143,31 @@ footer {
   border-radius: 50%;
 }
 
-.mySwiper .swiper-button-prev {
+.product-image .swiper-button-prev,
+.product-image .swiper-button-next {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
   display: none;
+  transition: 0.4s all ease-in-out;
 }
 .mySwiper .swiper-button-prev::after,
 .mySwiper .swiper-button-next::after {
   font-size: 16px;
   font-weight: 600;
   color: #212121;
+}
+.product-image .swiper-button-prev::after,
+.product-image .swiper-button-next::after {
+  font-size: 14px;
+  font-weight: 600;
+  color: #212121;
+}
+
+.product-diamond:hover .product-image .swiper-button-prev,
+.product-diamond:hover .product-image .swiper-button-next {
+  display: flex;
 }
 
 button {
@@ -172,4 +189,12 @@ input::-webkit-slider-thumb {
   left: 0;
   background-color: white;
   z-index: 9;
+}
+img {
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }

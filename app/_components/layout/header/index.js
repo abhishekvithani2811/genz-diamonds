@@ -12,6 +12,7 @@ import Stud from "./stud";
 import Ring from "./ring";
 import FineJewelry from "./fineJewelry";
 import Diamond from "./diamond";
+import { FaAngleLeft } from "react-icons/fa6";
 
 const STUD = [
     {
@@ -169,24 +170,52 @@ const subMenuItems = {
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
+    const [isMegaMenu, setIsMegaMenu] = useState(null)
+
+    const handleAllClose = () => {
+        setIsMegaMenu(null)
+        setIsOpen(false)
+    }
+
+    const handleBack = () => {
+        setIsMegaMenu(null)
+    }
+
     const navContent = <nav className={`flex lg:flex-row w-full ${setIsOpen ? 'flex-col' : 'hidden'}`}>
-        {navItems.map((item, index) => (
-            <div className="group relative">
-                <Link key={index} href={item.href} className={`hover:text-gray-700 flex justify-between items-center     ${index === 0 ? 'b' : ''} border-black/15 hover:underline hover:underline-offset-4 hover:decoration-[#BD9851] hover:text-[#BD9851] text-[#212121] font-normal lg:py-4 py-2 px-4`}>
-                    {item.label} <span className="lg:hidden"><MdOutlineKeyboardArrowRight fontSize={22} /></span>
-                </Link>
-                {
-                    Boolean(subMenuItems[item.href]) ? (
-                        <div className="z-[10] fixed left-0 right-0 hidden group-hover:block shadow-lg p-4 transition-all duration-300 ease-in-out bg-white max-h-[70vh] overflow-y-auto" >
-                            {subMenuItems[item.href]}
-                        </div>
-                    ) : null
-                }
-            </div>
-        ))}
+        {navItems.map((item, index) => {
+            const navClasses = `hover:text-gray-700 flex justify-between items-center ${index === 0 ? 'b' : ''} border-black/15 hover:underline hover:underline-offset-4 hover:decoration-[#BD9851] hover:text-[#BD9851] text-[#212121] font-normal lg:py-4 py-2 px-4`
+            return (
+                <div className="group relative">
+                    {
+                        Boolean(subMenuItems[item.href]) ? <div key={index} onClick={() => setIsMegaMenu(item.href)} className={navClasses}>
+                            {item.label} <span className="lg:hidden"><MdOutlineKeyboardArrowRight fontSize={22} /></span>
+                        </div> : <Link key={index} href={item.href} onClick={() => setIsOpen(false)} className={navClasses}>
+                            {item.label} <span className="lg:hidden"><MdOutlineKeyboardArrowRight fontSize={22} /></span>
+                        </Link>
+                    }
+                    {
+                        Boolean(subMenuItems[item.href]) ? (
+                            <div className={`z-[1] fixed left-0 right-0 lg:group-hover:block shadow-lg px-4 lg:py-4 transition-all duration-300 ease-in-out bg-white lg:max-h-[70vh] overflow-y-auto ${Boolean(item.href === isMegaMenu) ? 'lg:hidden top-0 bottom-0 right-0 left-0 block' : 'hidden'}`} >
+                                <div className="grid grid-cols-3 items-center sticky top-0 bg-white py-4 text-sm border-b border-dashed mb-2 lg:hidden">
+                                    <button className="lg:hidden flex items-center w-fit" onClick={handleBack}>
+                                        <FaAngleLeft className="mr-2" /> Back
+                                    </button>
+                                    <h3 className="text-center text-xl uppercase underline underline-offset-4 decoration-[#BD9851] px-2">{item?.label}</h3>
+                                    <button className="lg:hidden ml-auto" onClick={handleAllClose}>
+                                        <IoCloseSharp fontSize={20} />
+                                    </button>
+                                </div>
+
+                                {subMenuItems[item.href]}
+                            </div>
+                        ) : null
+                    }
+                </div>
+            )
+        })}
     </nav >
     return (
-        <header className="bg-white text-black lg:static sticky top-0 z-10">
+        <header className="bg-white text-black lg:static sticky top-0 z-[11]">
             {isOpen ? <div className="fixed top-0 bottom-0 right-0 left-0 bg-black/30" onClick={() => setIsOpen(false)} /> : null}
             <div className="flex lg:flex-col flex-row lg:justify-center justify-between lg:px-0 px-4">
                 <Link href="/" className="lg:mx-auto w-fit py-4 cursor-pointer">

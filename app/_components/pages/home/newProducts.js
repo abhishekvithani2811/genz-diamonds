@@ -1,11 +1,11 @@
 "use client"
-// src/components/NewArrivalProducts.js
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
 import { Navigation } from 'swiper/modules';
+import Image from 'next/image';
 
 const images = [
     "/assets/new-arrival/image.png",
@@ -49,7 +49,7 @@ export default function NewArrivalProducts() {
                     >
                         {
                             images?.map((item, i) => <SwiperSlide key={i} className='overflow-hidden bg-black'>
-                                <img src={item} alt={"Product " + i} className="md:w-full h-72 object-cover overflow-hidden" />
+                                <Image draggable={false} width={400} height={400} src={item} alt={"Product " + i} className="md:w-full h-72 object-cover overflow-hidden" />
                             </SwiperSlide>)
                         }
                     </Swiper>

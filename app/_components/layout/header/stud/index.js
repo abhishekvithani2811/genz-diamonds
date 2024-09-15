@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function Stud({ data }) {
     return (
-        <div className="flex justify-between md:px-10 mb-14">
-            <div className="grid grid-cols-3 gap-4">
+        <div className="flex justify-between md:px-10 mb-14 overflow-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {data.map((subMenu, subIndex) => (
                     <div key={subIndex}>
                         <h3 className="font-medium mb-2 Futura PT medium">{subMenu.category}</h3>
