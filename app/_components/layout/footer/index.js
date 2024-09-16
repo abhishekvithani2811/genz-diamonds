@@ -65,13 +65,6 @@ export default function Footer() {
                 <OptionsContent options={aboutUs} />
             </ul>
         },
-        {
-            title: "About Us",
-            options: services,
-            content: <ul className={accordianClass}>
-                <OptionsContent options={aboutUs} />
-            </ul>
-        },
     ]
 
     const MenuContent = () => AccordionContentData?.map(({ title, options }, index) => (

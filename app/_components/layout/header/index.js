@@ -171,6 +171,7 @@ const subMenuItems = {
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const [isMegaMenu, setIsMegaMenu] = useState(null)
+    const [activeMegaMenu, setActiveMegaMenu] = useState(null)
 
     const handleAllClose = () => {
         setIsMegaMenu(null)
@@ -183,14 +184,14 @@ export default function Header() {
 
     const navContent = <nav className={`flex lg:flex-row w-full ${setIsOpen ? 'flex-col' : 'hidden'}`}>
         {navItems.map((item, index) => {
-            const navClasses = `hover:text-gray-700 flex justify-between items-center ${index === 0 ? 'b' : ''} border-black/15 hover:underline hover:underline-offset-4 hover:decoration-[#BD9851] hover:text-[#BD9851] text-[#212121] font-normal lg:py-4 py-2 px-4`
+            const navClasses = `hover:text-gray-700 ${index === 0 ? 'b' : ''} border-black/15 hover:underline hover:underline-offset-4 hover:decoration-[#BD9851] hover:text-[#BD9851] text-[#212121] lg:py-4 py-2 px-4 sm:text-base text-3xl text-center block sm:capitalize uppercase font-futura-thin font-normal`
             return (
-                <div className="group relative">
+                <div className="group relative" onMouseEnter={() => Boolean(subMenuItems[item.href]) ? setActiveMegaMenu(item.href) : null} onMouseLeave={() => Boolean(subMenuItems[item.href]) ? setActiveMegaMenu(null) : null}>
                     {
                         Boolean(subMenuItems[item.href]) ? <div key={index} onClick={() => setIsMegaMenu(item.href)} className={navClasses}>
-                            {item.label} <span className="lg:hidden"><MdOutlineKeyboardArrowRight fontSize={22} /></span>
+                            {item.label}
                         </div> : <Link key={index} href={item.href} onClick={() => setIsOpen(false)} className={navClasses}>
-                            {item.label} <span className="lg:hidden"><MdOutlineKeyboardArrowRight fontSize={22} /></span>
+                            {item.label}
                         </Link>
                     }
                     {
@@ -215,7 +216,7 @@ export default function Header() {
         })}
     </nav >
     return (
-        <header className="bg-white text-black lg:static sticky top-0 z-[11]">
+        <header className={`bg-white text-black sticky top-0 z-[11] ${activeMegaMenu ? 'lg:sticky' : 'lg:static'}`}>
             {isOpen ? <div className="fixed top-0 bottom-0 right-0 left-0 bg-black/30" onClick={() => setIsOpen(false)} /> : null}
             <div className="flex lg:flex-col flex-row lg:justify-center justify-between lg:px-0 px-4">
                 <Link href="/" className="lg:mx-auto w-fit py-4 cursor-pointer">
@@ -225,8 +226,8 @@ export default function Header() {
                     <div className="flex justify-between items-center max-w-[1760px] mx-auto w-full">
                         <div className="max-w-[120px] w-full lg:block hidden" />
 
-                        <div className={`flex-col lg:flex-row lg:flex ${isOpen ? 'fixed top-0 bottom-0 left-0 bg-white max-w-[300px] w-full border flex-col duration-300 transition-transform z-10' : 'hidden'} lg:space-x-4`}>
-                            <div className="lg:hidden flex justify-between items-center px-4">
+                        <div className={`flex-col lg:flex-row lg:flex ${isOpen ? 'fixed top-0 bottom-0 left-0 bg-white max-w-[300px] w-full border flex-col duration-300 transition-transform z-10' : ''} ${isOpen ? 'fixed top-0 bottom-0 left-0 bg-white max-w-[300px] w-full border flex-col duration-300 transition-transform z-10' : 'hidden'} lg:space-x-4`}>
+                            <div className="lg:hidden flex justify-between items-center px-4 mb-10">
                                 <Link href="/" className="lg:mx-auto w-fit py-4 cursor-pointer">
                                     <Image src="/assets/logo.png" alt="Logo" className="lg:max-w-max md:max-w-[120px] max-w-[100px]" width={184.3} height={78.01} />
                                 </Link>

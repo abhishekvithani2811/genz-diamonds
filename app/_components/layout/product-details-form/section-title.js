@@ -20,7 +20,7 @@ const SectionTitle = ({ title, subtitle, variant = 'default' }) => {
             <div className='flex flex-col gap-3 md:gap-0 md:flex-row items-start mb-4'>
                 <p className=" text-sm text-[#8E8E93]">{subtitle}</p>
                 {variant === 'second' && (
-                    <button className="flex items-center py-2 px-4 border  font-futura-medium text-sm">
+                    <button className="flex items-center py-2 px-4 border ml-auto font-futura-medium text-sm">
                         <GiCutDiamond className="text-xl text-purple-500 mr-1" />
                         <span>Customize</span>
                     </button>

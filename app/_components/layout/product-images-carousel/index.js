@@ -38,7 +38,7 @@ export default function ImageCarousel({ images }) {
             >
                 {images.map((image, index) => (
                     <SwiperSlide key={index}>
-                        <img src={image} alt={`Thumbnail ${index}`} className="w-full h-auto object-cover rounded-lg" />
+                        <img src={image} alt={`Thumbnail ${index}`} className="w-full h-auto object-cover   " />
                     </SwiperSlide>
                 ))}
             </Swiper>

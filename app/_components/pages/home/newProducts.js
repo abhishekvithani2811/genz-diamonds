@@ -27,16 +27,13 @@ export default function NewArrivalProducts() {
                     </p>
                     <button className="px-6 py-2 text-black border border-black hover:bg-gray-200">Shop Now</button>
                 </div>
-                <div className="md:w-1/2 px-4 py-8 md:pr-0">
+                <div className="md:w-1/2 w-full px-4 pt-8 sm:pb-8 md:pr-0">
                     <Swiper
                         spaceBetween={10}
                         slidesPerView={1.5}
                         breakpoints={{
                             0: {
-                                slidesPerView: 2,
-                            },
-                            640: {
-                                slidesPerView: 2.5,
+                                slidesPerView: 1,
                             },
                             1024: {
                                 slidesPerView: 2.5,

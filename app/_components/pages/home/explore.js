@@ -15,8 +15,6 @@ export default function ExploreSection() {
             <SectionHeader
                 title="Explore The Range"
                 subtitle="SHOP BY CATEGORY"
-                showButton={true}
-                buttonText="View More"
             />
             <div className="mt-12 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                 {categories.map((category) => (

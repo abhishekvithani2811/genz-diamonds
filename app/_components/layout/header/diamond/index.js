@@ -35,7 +35,7 @@ export default function Diamond() {
             </div>
             {underline()}
             <div className="flex justify-between md:px-10 mb-8">
-                <div className="flex flex-row w-full gap-2">
+                <div className="flex sm:flex-row flex-col sm:gap-0 gap-4 w-full gap-2">
                     <div className="lg:w-1/12">
                         <h2 className="font-futura-medium text-lg mb-4">Begin Exploring</h2>
                         <ul>

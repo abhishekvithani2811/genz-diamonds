@@ -54,6 +54,10 @@ const ProductDetailsForm = ({
         navigate('/check-out'); // Navigate to cart page
     };
 
+    const addEngraving = () => <div className="mb-4">
+        <label className="block text-[#8E8E93] mb-2"><span className="font-futura-medium underline text-lg text-[#B4A377] font-normal">Add Engraving</span> <span className='opacity-75 font-futura-thin'>(Optional)</span></label>
+    </div>
+
     return variant === 'second' ? (
         <div className="w-full">
             <SectionTitle title={title} subtitle={`(SKU: ${sku})`} variant={variant} />
@@ -69,8 +73,8 @@ const ProductDetailsForm = ({
             </div>
             <hr className="border-t border-dashed border-gray-300 mb-4" />
             <div className="grid grid-cols-2 gap-2 items-center">
-                <h1 className="text-lg font-semibold font-futura-medium">Band</h1>
-                <h1 className="text-lg font-semibold font-futura-medium">Band</h1>
+                <h1 className="text-lg font-medium font-futura-medium">Band</h1>
+                <h1 className="text-lg font-medium font-futura-medium">Band</h1>
                 <OptionSelector
                     label="Metal"
                     options={metals}
@@ -119,9 +123,9 @@ const ProductDetailsForm = ({
             </div>
             <hr className="border-t border-dashed border-gray-300 my-4" />
             <div className="grid grid-cols-2 gap-4">
-                <h1 className="text-lg font-semibold font-futura-medium">Stone</h1>
+                <h1 className="text-lg font-medium font-futura-medium">Stone</h1>
                 <div className='flex items-center gap-x-4 justify-between'>
-                    <h1 className="text-lg font-semibold font-futura-medium">Stone</h1>
+                    <h1 className="text-lg font-medium font-futura-medium">Stone</h1>
                     <a href="#" className="text-[#B4A377] underline text-sm block">Find a Specific Diamond</a>
                 </div>
                 <OptionSelector
@@ -225,10 +229,7 @@ const ProductDetailsForm = ({
                 />
             </div>
             <hr className="border-t border-dashed border-gray-300 my-4" />
-            <div className="mb-4">
-
-                <label className="block text-[#8E8E93] mb-2"><span className="font-futura-medium underline text-lg text-[#B4A377] font-medium">Add Engraving</span> (Optional)</label>
-            </div>
+            {addEngraving()}
             <Button variant="primary" className="flex-1 block w-full" onClick={() => router.push('/cart')}>Add to Cart</Button>
         </div>
     ) : <div className="w-full">
@@ -248,6 +249,7 @@ const ProductDetailsForm = ({
             selectedOption={selectedValues.tone}
             onSelect={(tone) => setSelectedValues({ ...selectedValues, tone })}
         />
+        {underLine({ width: '98%' })}
         <OptionSelector
             label="Stone Selection"
             options={stoneSelections}
@@ -293,14 +295,11 @@ const ProductDetailsForm = ({
             selectedOption={selectedValues.size}
             onSelect={(size) => setSelectedValues({ ...selectedValues, size })}
         />
-        <div className="mb-4">
-            <label className="block text-[#8E8E93] mb-2"><span className="font-futura-medium underline text-lg  font-medium">Show more sizes</span></label>
-            <label className="block text-[#8E8E93] mb-2"><span className="font-futura-medium underline text-lg text-[#B4A377] font-medium">Add Engraving</span> (Optional)</label>
-        </div>
+        {addEngraving()}
         <Link href="/cart">
             <Button variant="primary" className="flex-1 block w-full" onClick={handleAddToCart}>Add to Cart</Button>
         </Link>
-        <p className="text-[#7A7A7A] text-base mt-4 flex items-center"><TbTruckDelivery className="mr-2" />{deliveryInfo}</p>
+        <p className="text-[#7A7A7A] text-base mt-4 flex items-center"><TbTruckDelivery fontSize={22} className="mr-2" />{deliveryInfo}</p>
         <p className="text-[#7A7A7A] text-base mt-1">{stockInfo}</p>
     </div>;
 };

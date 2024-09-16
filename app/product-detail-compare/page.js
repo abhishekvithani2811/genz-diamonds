@@ -60,11 +60,11 @@ const DiamondList = () => {
         <div className="py-4">
             <div className="flex flex-col-reverse lg:flex-row flex-wrap xl:flex-nowrap gap-4 relative">
                 {/* Left Column */}
-                <div className="w-full overflow-hidden bg-[#F2F2F7] lg:order">
+                <div className="w-full overflow-hidden bg-[#F2F2F7] lg:order 3xl:max-w-[50%]">
                     <ProductDetailCompare />
                 </div>
                 {/* Product Details */}
-                <div className="xl:w-full 2xl:max-w-[400px] 1xl:max-w-[350px] xl:max-w-[248px] lg:w-1/2 relative xl:p-0 p-3">
+                <div className="xl:w-full 3xl:max-w-[50%] 2xl:max-w-[400px] 1xl:max-w-[350px] xl:max-w-[248px] lg:w-1/2 relative xl:p-0 p-3">
                     <ProductDetailsComparisonForm {...productDetails} />
                 </div>
                 {/* Right Column */}

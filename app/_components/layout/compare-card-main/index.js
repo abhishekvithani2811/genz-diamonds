@@ -10,7 +10,7 @@ export default function CompareCardMain({ handleCheck, selected = false }) {
     }
 
     return (
-        <div className="max-w-full bg-white border border-[#F2F2F7] 2xl:p-4">
+        <div className="max-w-full bg-white border border-[#F2F2F7]">
             {/* Upper section with image, SKU, and price */}
             <Image width={400} height={400} className="w-full object-contain h-48" src="/assets/diamonds/image.png" alt="Elegant Diamond Ring" />
             <div className="p-3">

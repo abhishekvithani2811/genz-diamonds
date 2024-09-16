@@ -149,7 +149,7 @@ footer {
   height: 30px;
   background-color: white;
   border-radius: 50%;
-  display: none;
+  /* display: none; */
   transition: 0.4s all ease-in-out;
 }
 .mySwiper .swiper-button-prev::after,

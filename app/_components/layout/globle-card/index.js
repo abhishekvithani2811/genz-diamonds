@@ -69,11 +69,10 @@ function GlobleCard() {
                     {underLine({ width: '100%' })}
                 </div>
                 <p className="flex justify-center items-center text-sm mb-4 font-futura-thin text-[#B4A377]">Delivery in 2-3 Working Days</p>
-                <div className="flex space-x-4">
-                    <Link href="/product-detail-customize">
-                        <Button className="flex-1">View Details</Button>
-                    </Link>
-                    <Button variant="primary" className="flex-1">Add to Cart</Button>
+                <div className="grid grid-cols-2 gap-x-4">
+                    <Button className="flex-1"><Link href="/product-detail-customize">View Details</Link></Button>
+
+                    <Button variant="primary" className="flex-1"><Link href="/cart">Add to Cart</Link></Button>
                 </div>
             </div>
         </div>
