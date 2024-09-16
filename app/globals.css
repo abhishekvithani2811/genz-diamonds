@@ -101,6 +101,7 @@ footer {
     flex-wrap: nowrap;
   }
 }
+
 @media (max-width: 1024px) {
   .flex-media {
     flex-wrap: wrap;
@@ -152,12 +153,14 @@ footer {
   /* display: none; */
   transition: 0.4s all ease-in-out;
 }
+
 .mySwiper .swiper-button-prev::after,
 .mySwiper .swiper-button-next::after {
   font-size: 16px;
   font-weight: 600;
   color: #212121;
 }
+
 .product-image .swiper-button-prev::after,
 .product-image .swiper-button-next::after {
   font-size: 14px;
@@ -178,18 +181,21 @@ button {
 input::-webkit-slider-thumb {
   background: #00fd0a;
 }
+
 .sticky-header {
   position: sticky;
   top: 0;
   background-color: white;
   z-index: 9;
 }
+
 .sticky-left {
   position: sticky;
   left: 0;
   background-color: white;
   z-index: 9;
 }
+
 img {
   user-drag: none;
   -webkit-user-drag: none;
@@ -197,4 +203,105 @@ img {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+}
+
+.range-slider {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.range-slider label {
+  display: block;
+  /* text-align: center; */
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #666;
+}
+
+.slider-container {
+  position: relative;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 2px;
+  background: transparent;
+  outline: none;
+  position: absolute;
+  pointer-events: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height:20px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  pointer-events: all;
+  position: relative;
+  z-index: 2;
+  border: 2px solid #B4A377;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 4px #666;
+  border: 2px solid #B4A377;
+}
+
+.track {
+  position: absolute;
+  height: 1px;
+  background-color: #B4A377;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.highlight-track {
+  position: absolute;
+  height: 2px;
+  background-color: #B4A377;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.steps {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.step-marker {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #B4A377;
+  top: -4px;
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  top: 65px;
+  pointer-events: none;
+  color: #666;
+}
+
+.labels span {
+  position: relative;
+  font-size: 12px;
 }
