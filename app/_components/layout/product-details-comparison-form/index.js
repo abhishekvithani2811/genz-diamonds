@@ -80,7 +80,7 @@ const ProductDetailsComparisonForm = ({
                 onSelect={(stoneSelection) => setSelectedValues({ ...selectedValues, stoneSelection })}
             />
             <div className="w-full px-4 md-pr-4 mx-auto">
-            <RangeSlider
+            {/* <RangeSlider
                 label="Carat"
                 min="1.5"
                 max="10"
@@ -90,7 +90,7 @@ const ProductDetailsComparisonForm = ({
                 handleInputChange={handleInputChange}
                 // stepCount={10}
                 labels={["Min. 1.5ct", "10.00"]}
-            />
+            /> */}
             <RangeSlider
                 label="Colour"
                 min="0"
