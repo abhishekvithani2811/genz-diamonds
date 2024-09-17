@@ -6,7 +6,7 @@ import OptionSelector from '../product-details-form/option-selector';
 // Reusable Slider Component
 const RangeSlider = ({ label, min, max, step, range, sliderType, handleInputChange, stepCount, labels }) => (
     <div className="range-slider w-full mx-auto">
-        <label className="font-Futura PT Bold text-xl">{label}</label>
+        <label className=" text-xl">{label}</label>
         <div className="slider-container">
             <input
                 type="range"
@@ -15,7 +15,7 @@ const RangeSlider = ({ label, min, max, step, range, sliderType, handleInputChan
                 step={step}
                 value={range.min}
                 onChange={(e) => handleInputChange(e, 'min', sliderType)}
-                className="slider"
+                className="slider appearance-none bg-gray-700"
                 id={`sliderMin${sliderType}`}
             />
             <input
@@ -25,15 +25,17 @@ const RangeSlider = ({ label, min, max, step, range, sliderType, handleInputChan
                 step={step}
                 value={range.max}
                 onChange={(e) => handleInputChange(e, 'max', sliderType)}
-                className="slider"
+                className="slider appearance-none"
                 id={`sliderMax${sliderType}`}
             />
             <div className="track"></div>
             <div className="highlight-track" style={{ left: `${(range.min / (max - min)) * 100}%`, right: `${100 - (range.max / (max - min)) * 100}%` }}></div>
             <div className="steps">
-                {Array.from({ length: stepCount }).map((_, index) => (
-                    <span key={index} className="step-marker" style={{ left: `${(index / (stepCount - 1)) * 100}%` }}></span>
-                ))}
+                {Array.from({ length: stepCount }).map((_, index) => {
+                    const position = (index / (stepCount - 1)) * 100;
+                    const style = position < 50 ? { left: `${position}%` } : { right: `${100 - position}%` };
+                    return <span key={index} className="step-marker" style={style}></span>;
+                })}
             </div>
         </div>
         <div className="labels flex justify-between font-Futura PT Light">
@@ -72,15 +74,15 @@ const ProductDetailsComparisonForm = ({
     };
 
     return (
-        <div className="w-full h-fit lg:sticky static top-0">
-                <OptionSelector
+        <div className="w-full h-fit lg:sticky static top-0 px-4">
+            <OptionSelector
                 label="Stone Selection"
                 options={stoneSelections}
                 selectedOption={selectedValues.stoneSelection}
                 onSelect={(stoneSelection) => setSelectedValues({ ...selectedValues, stoneSelection })}
             />
-            <div className="w-full px-4 md-pr-4 mx-auto">
-            {/* <RangeSlider
+            <div className="w-full">
+                {/* <RangeSlider
                 label="Carat"
                 min="1.5"
                 max="10"
@@ -91,46 +93,46 @@ const ProductDetailsComparisonForm = ({
                 // stepCount={10}
                 labels={["Min. 1.5ct", "10.00"]}
             /> */}
-            <RangeSlider
-                label="Colour"
-                min="0"
-                max="6"
-                range={ranges.colour}
-                sliderType="colour"
-                handleInputChange={handleInputChange}
-                stepCount={7}
-                labels={["D", "E", "F", "G", "H", "I", "J"]}
-            />
-            <RangeSlider
-                label="Clarity"
-                min="0"
-                max="7"
-                range={ranges.clarity}
-                sliderType="clarity"
-                handleInputChange={handleInputChange}
-                stepCount={8}
-                labels={["SI2", "SI1", "VS2", "VS1", "VVS2", "VVS1", "IF", "FL"]}
-            />
-            <RangeSlider
-                label="Cut"
-                min="0"
-                max="3"
-                range={ranges.cut}
-                sliderType="cut"
-                handleInputChange={handleInputChange}
-                stepCount={4}
-                labels={["Good", "Very Good", "Excellent", "Ideal"]}
-            />
-            <div className="mb-4"></div>
-            <OptionSelector
-                label="Certificate"
-                options={certificate}
-                selectedOption={selectedValues.certificate}
-                onSelect={(certificate) => setSelectedValues({ ...selectedValues, certificate })}
-            />
-            <div className="mb-4">
-                <label className="block text-[#8E8E93] mb-2"><span className="font-futura-medium underline text-lg text-[#B4A377] font-medium">Advanced Options</span> (Optional)</label>
-            </div>
+                <RangeSlider
+                    label="Colour"
+                    min="0"
+                    max="6"
+                    range={ranges.colour}
+                    sliderType="colour"
+                    handleInputChange={handleInputChange}
+                    stepCount={7}
+                    labels={["D", "E", "F", "G", "H", "I", "J"]}
+                />
+                <RangeSlider
+                    label="Clarity"
+                    min="0"
+                    max="7"
+                    range={ranges.clarity}
+                    sliderType="clarity"
+                    handleInputChange={handleInputChange}
+                    stepCount={8}
+                    labels={["SI2", "SI1", "VS2", "VS1", "VVS2", "VVS1", "IF", "FL"]}
+                />
+                <RangeSlider
+                    label="Cut"
+                    min="0"
+                    max="3"
+                    range={ranges.cut}
+                    sliderType="cut"
+                    handleInputChange={handleInputChange}
+                    stepCount={4}
+                    labels={["Good", "Very Good", "Excellent", "Ideal"]}
+                />
+                <div className="mb-4"></div>
+                <OptionSelector
+                    label="Certificate"
+                    options={certificate}
+                    selectedOption={selectedValues.certificate}
+                    onSelect={(certificate) => setSelectedValues({ ...selectedValues, certificate })}
+                />
+                <div className="mb-4">
+                    <label className="block text-[#8E8E93] mb-2"><span className="font-futura-medium underline text-lg text-[#B4A377] font-medium">Advanced Options</span> (Optional)</label>
+                </div>
                 <Button variant="primary" className="flex-1 block w-full">Close</Button>
             </div>
         </div>

@@ -80,8 +80,8 @@ const DiamondCardCompare = ({ diamond }) => {
                 </tbody>
             </table>
             <div className="mt-4 text-center">
-                <button onClick={() => redirect('/cart')} className="bg-yellow-500 text-white py-2 px-4 rounded-lg hover:bg-yellow-600">Add to Ring</button>
-                <button className="bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-900 ml-2">View Details</button>
+                <button onClick={() => redirect('/cart')} className="bg-yellow-500 text-white py-2 px-4 hover:bg-yellow-600">Add to Ring</button>
+                <button className="bg-gray-800 text-white py-2 px-4 hover:bg-gray-900 ml-2">View Details</button>
             </div>
         </div>
     );

@@ -10,7 +10,6 @@ export default function ProductDetailCompare() {
 
     const handleCheckBox = (val) => {
         const isExist = selected.find(item => item.id === val.id)
-        console.log("val", val, isExist);
         if (isExist === -1 || !isExist) {
             setSelected([...selected, val])
         } else {
@@ -21,12 +20,11 @@ export default function ProductDetailCompare() {
             setSelected(tmp)
         }
 
-        console.log("selected", selected);
     }
 
     const comparisonToggle = () => selected.length >= 2 ? setIsComparison(!isComparison) : setIsComparison(false)
     return (
-        <>
+        <div className="w-full">
             <ComparisonHeader selected={selected?.map((item) => item.id)} setIsComparison={comparisonToggle} />
 
             {
@@ -34,6 +32,6 @@ export default function ProductDetailCompare() {
             }
 
             <ComparisonLayout isComparison={isComparison} selected={selected?.map((item) => item.id)} setSelected={handleCheckBox} />
-        </>
+        </div>
     );
 };

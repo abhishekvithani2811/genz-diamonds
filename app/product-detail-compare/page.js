@@ -58,17 +58,18 @@ const DiamondList = () => {
     </div>
     return (
         <div className="py-4">
-            <div className="flex flex-col-reverse lg:flex-row flex-wrap xl:flex-nowrap gap-4 relative">
+            <div className="grid grid-cols-1 lg:grid-cols-6 gap-2 relative">
                 {/* Left Column */}
-                <div className="w-full overflow-hidden bg-[#F2F2F7] lg:order 3xl:max-w-[50%]">
+                <div className="col-span-3 overflow-hidden bg-[#F2F2F7] lg:order">
                     <ProductDetailCompare />
                 </div>
                 {/* Product Details */}
-                <div className="xl:w-full 3xl:max-w-[50%] 2xl:max-w-[400px] 1xl:max-w-[350px] xl:max-w-[248px] lg:w-1/2 relative xl:p-0 p-3">
+                <div className="col-span-2 relative xl:p-0 p-3">
                     <ProductDetailsComparisonForm {...productDetails} />
                 </div>
+
                 {/* Right Column */}
-                <div className="xl:w-full bg-[#F2F2F7] 1xl:max-w-[280px] xl:max-w-[220px] lg:w-1/3 p-6 mt-6 lg:mt-0 relative lg:block hidden">
+                <div className="bg-[#F2F2F7] xl:p-6 p-3 mt-6 lg:mt-0 relative lg:block hidden">
                     {infoContent()}
                 </div>
             </div>

@@ -23,7 +23,7 @@ export default function DiamondFilter() {
                                     </Link>
                                 ))}
                             </div>
-                            <button className="p-2 border rounded-lg bg-gray-200">
+                            <button className="p-2 border  bg-gray-200">
                                 <FaPlus className='text-white' />
                             </button>
                         </div>

@@ -3,7 +3,6 @@ import { AiOutlineHeart, AiOutlineShareAlt } from 'react-icons/ai';
 import { GiCutDiamond } from "react-icons/gi";
 
 const SectionTitle = ({ title, subtitle, variant = 'default' }) => {
-    console.log('title', title);
     return (
         <div className="mb-4 sm:mt-2 md:mt-0">
             <div className='flex justify-between items-center mb-2 mt-3 md:mt-0'>

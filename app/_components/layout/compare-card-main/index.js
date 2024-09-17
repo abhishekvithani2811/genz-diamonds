@@ -13,7 +13,7 @@ export default function CompareCardMain({ handleCheck, selected = false }) {
         <div className="max-w-full bg-white border border-[#F2F2F7]">
             {/* Upper section with image, SKU, and price */}
             <Image width={400} height={400} className="w-full object-contain h-48" src="/assets/diamonds/image.png" alt="Elegant Diamond Ring" />
-            <div className="p-3">
+            <div className="3xl:p-3 p-2">
 
                 <div className="grid grid-cols-2 gap-2">
                     <div className="flex flex-col w-full">
@@ -51,9 +51,9 @@ export default function CompareCardMain({ handleCheck, selected = false }) {
                     </div>
                     <div className="text-lg font-semibold">£ 599.48</div>
                 </div>
-                <div className="flex space-x-4 text-nowrap">
-                    <Button className="flex-1 text-sm">View Details</Button>
-                    <Button variant="primary" className="flex-1 text-sm" onClick={() => router.push('/cart')}>Add to Cart</Button>
+                <div className="flex 3xl:gap-x-2 gap-x-1 text-nowrap">
+                    <Button className="flex-1 !text-sm">View Details</Button>
+                    <Button variant="primary" className="flex-1 !text-sm" onClick={() => router.push('/cart')}>Add to Cart</Button>
                 </div>
             </div>
         </div>

@@ -8,7 +8,6 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 
 export default function ImageCarousel({ images }) {
-    console.log(images);
     const [swiperInstance, setSwiperInstance] = useState(null);
 
     return (

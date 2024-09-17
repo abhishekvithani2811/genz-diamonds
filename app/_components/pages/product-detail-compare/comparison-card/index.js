@@ -165,7 +165,7 @@ export default function ComparisonLayout({ setSelected, selected, isComparison =
 
     const compareContent = () => <CompareTable data={data?.filter((item) => selected.includes(item.id))} handleRemove={setSelected} />
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 flex-wrap gap-3 p-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 flex-wrap gap-2 p-3">
             {
                 isComparison && selected.length > 1 ? (
                     compareContent()

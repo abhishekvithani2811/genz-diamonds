@@ -226,7 +226,7 @@ img {
 .slider {
   -webkit-appearance: none;
   width: 100%;
-  height: 2px;
+  height: 1px;
   background: transparent;
   outline: none;
   position: absolute;
@@ -237,14 +237,14 @@ img {
   -webkit-appearance: none;
   appearance: none;
   width: 20px;
-  height:20px;
+  height: 20px;
   border-radius: 50%;
   background: #fff;
   cursor: pointer;
   pointer-events: all;
   position: relative;
   z-index: 2;
-  border: 2px solid #B4A377;
+  border: 2px solid #b4a377;
 }
 
 .slider::-moz-range-thumb {
@@ -254,13 +254,13 @@ img {
   background: #fff;
   cursor: pointer;
   box-shadow: 0 0 4px #666;
-  border: 2px solid #B4A377;
+  border: 2px solid #b4a377;
 }
 
 .track {
   position: absolute;
   height: 1px;
-  background-color: #B4A377;
+  background-color: #b4a377;
   width: 100%;
   top: 50%;
   transform: translateY(-50%);
@@ -269,17 +269,33 @@ img {
 .highlight-track {
   position: absolute;
   height: 2px;
-  background-color: #B4A377;
+  background-color: #b4a377;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .steps {
   position: absolute;
-  width: 100%;
   height: 2px;
   top: 50%;
   transform: translateY(-50%);
+}
+
+@media (max-width: 1024px) {
+  .steps {
+    width: 99%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .steps {
+    width: 98%;
+  }
+}
+@media (min-width: 1800px) {
+  .steps {
+    width: 100%;
+  }
 }
 
 .step-marker {
@@ -287,7 +303,7 @@ img {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #B4A377;
+  background-color: #b4a377;
   top: -4px;
 }
 
@@ -304,4 +320,27 @@ img {
 .labels span {
   position: relative;
   font-size: 12px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #055f2600;
+  height: 0.5rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -8px;
+  background-color: #ffffff;
+  border: 2px solid #b4a377;
+  width: 20px;
+  height: 20px;
+  border: 2px 0px 0px 0px;
 }

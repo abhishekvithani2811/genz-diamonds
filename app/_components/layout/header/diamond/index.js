@@ -47,7 +47,7 @@ export default function Diamond() {
                         <h2 className="font-futura-medium text-lg mb-4">Find your certified diamonds</h2>
                         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-9 gap-4">
                             {items.map((shape, index) => (
-                                <div key={index} className="flex flex-col items-center p-4 bg-[#F9F9F9] rounded shadow-sm">
+                                <div key={index} className="flex flex-col items-center p-4 bg-[#F9F9F9] shadow-sm">
                                     <img src={shape.icon} alt={shape.name} className="w-20 h-24 mb-2" />
                                     <span className="text-sm text-gray-800">{shape.name}</span>
                                 </div>
