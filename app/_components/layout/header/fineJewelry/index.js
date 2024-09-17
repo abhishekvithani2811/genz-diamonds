@@ -25,7 +25,6 @@ export default function FineJewelry({ data }) {
                                 <h3 className="font-medium mb-2 font-futura-medium sm:text-xl text-lg">{subMenu.category}</h3>
                                 <ul>
                                     {subMenu.items.map((subItem, subItemIndex) => {
-                                        console.log('Item', subItem);
                                         return (
                                             <li key={subItemIndex} className="flex items-center py-1 hover:text-gray-700">
                                                 {subItem.icon &&

@@ -12,7 +12,6 @@ export default function Stud({ data }) {
                             <h3 className="font-medium mb-2 font-futura-medium sm:text-xl text-lg">{subMenu.category}</h3>
                             <ul>
                                 {subMenu.items.map((subItem, subItemIndex) => {
-                                    console.log('Item', subItem);
                                     return (
                                         <li key={subItemIndex} className="flex items-center py-1 hover:text-gray-700 sm:gap-x-4 gap-x-3">
                                             <Image src={subItem.icon} alt={subItem.name} width={20} height={24} className="mr-2 sm:w-auto w-7" />

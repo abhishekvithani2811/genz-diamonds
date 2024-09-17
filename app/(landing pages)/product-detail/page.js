@@ -1,21 +1,20 @@
 // src/components/ProductDetails.js
 import React from 'react';
-import ProductList from '../_components/pages/product-list';
-import DetailCard from '../_components/layout/globle-card';
-import InfoSection from '../_components/layout/info-section';
-import ImageCarousel from '../_components/layout/product-images-carousel';
-import ProductDetailsForm from '../_components/layout/product-details-form';
-import ProductDetailsLayout from '../_components/layout/product-details-layout';
+import ProductList from '../../_components/pages/product-list';
+import DetailCard from '../../_components/layout/globle-card';
+import InfoSection from '../../_components/layout/info-section';
+import ImageCarousel from '../../_components/layout/product-images-carousel';
+import ProductDetailsForm from '../../_components/layout/product-details-form';
+import ProductDetailsLayout from '../../_components/layout/product-details-layout';
 
 const SIDE_DATA = [
     {
         title: 'Ask Query',
         buttons: [
-            'Customize',
+            'Customer',
             'Return & Policy',
-            'Chat',
-            'Mail',
-            'Pdf',
+            'Order',
+            'Mail'
         ]
     },
     {
@@ -38,11 +37,12 @@ const images = [
 const productDetails = {
     title: "Bespoke Signet Ring (gold)",
     sku: "123456789",
-    price: "3000.00",
+    price: "2800.00",
+    originalPrice: "3000.00",
     metals: ["9K Gold", "10K Gold", "18K Gold", "Silver", "Platinum"],
     tones: ["White Gold", "Yellow Gold"],
-    type: ["Labl", "Diamond Recommendations"],
     stoneSelections: ["Find Specific Diamond", "Diamond Recommendations"],
+    type: ["Lab", "Diamond Recommendations"],
     totalCarat: ["1.00"],
     color: ["G"],
     clarity: ["SI1/SI2"],
@@ -52,13 +52,14 @@ const productDetails = {
     engravingPlaceholder: "Enter engraving text",
     deliveryInfo: "Delivered in 2-4 weeks approx. Check your P.O. Box",
     stockInfo: "Please check again if STOCK is available for 2-3 day delivery.",
-    variant: "second"
+    variant: "default",
+    shape: "Round"
 };
 
 const cards = {
     title: "Ready Stock for Quick Delivery",
-    subtitle: "Instant Stock, Fast Delivery",
-    data: Array.from({ length: 4 })
+    subtitle: "Store Jewelry",
+    data: Array.from({ length: 8 })
 }
 
 const ProductDetails = () => {

@@ -1,10 +1,10 @@
 // src/components/DiamondList.js
 import React from 'react';
-import SectionHeader from '../_components/layout/section-header';
-import GlobleCard from '../_components/layout/globle-card';
-import ProductDetailCompare from '../_components/pages/product-detail-compare';
-import InfoSection from '../_components/layout/info-section';
-import ProductDetailsComparisonForm from '../_components/layout/product-details-comparison-form';
+import SectionHeader from '../../_components/layout/section-header';
+import GlobleCard from '../../_components/layout/globle-card';
+import ProductDetailCompare from '../../_components/pages/product-detail-compare';
+import InfoSection from '../../_components/layout/info-section';
+import ProductDetailsComparisonForm from '../../_components/layout/product-details-comparison-form';
 
 const SIDE_DATA = [
     {

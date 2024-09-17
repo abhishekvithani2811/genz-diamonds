@@ -15,7 +15,6 @@ export default function Ring({ data }) {
                             {/* <h3 className="font-medium mb-2 Futura PT medium">{subMenu.category}</h3> */}
                             <ul>
                                 {subMenu.items.map((subItem, subItemIndex) => {
-                                    console.log('Item', subItem);
                                     return (
                                         <li key={subItemIndex} className="flex items-center py-1 hover:text-gray-700 gap-x-3 sm:gap-x-4">
                                             <Image src={subItem.icon} alt={subItem.name} width={24} height={24} className="mr-2 sm:w-auto w-7" />
