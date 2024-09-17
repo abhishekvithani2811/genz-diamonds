@@ -18,13 +18,13 @@ const categories = [
 
 export default function ExploreSection() {
     return (
-        <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="lg:py-16 pt-7 pb-14 px-4 sm:px-6 lg:px-8 bg-white">
             <SectionHeader
                 title="Explore The Range"
                 subtitle="SHOP BY CATEGORY"
             />
-            <div className="mt-12">
-                <Swiper 
+            <div className="lg:mt-12 mt-7">
+                <Swiper
                     spaceBetween={10}
                     slidesPerView={4}
                     breakpoints={{
@@ -35,14 +35,31 @@ export default function ExploreSection() {
                             slidesPerView: 2.5,
                         },
                         1024: {
+                            slidesPerView: 3,
+                        },
+                        1262: {
+                            slidesPerView: 3.5, 
+                        },
+                        1460: {
                             slidesPerView: 4,
                         },
+                        1920: {
+                            slidesPerView: 4.5,
+                        },
+                        2092: {
+                            slidesPerView: 5,
+                        },
+                        2592: {
+                            slidesPerView: 5.5,
+                        },
+                        
+
                     }}
                     loop
                     className="mySwiper"
                 >
                     {categories.map((category) => (
-                        <SwiperSlide  className="group relative cursor-pointer">
+                        <SwiperSlide className="group relative cursor-pointer">
 
                             <Link href="/products" key={category.name} className="group relative cursor-pointer">
                                 <div className="w-full md:h-80 1xl:h-96 md:h-72 bg-gray-200 overflow-hidden group-hover:opacity-75">

@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { FaCheck } from 'react-icons/fa';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -10,15 +10,18 @@ export default function SelectedGallary() {
     const categories = [
         { name: 'Statement', image: '/assets/products/1.png' },
         { name: 'Engagement', image: '/assets/products/2.png' },
+        { name: 'Stacking', image: '/assets/products/4.png' },
         { name: 'Statement', image: '/assets/products/1.png' },
         { name: 'Eternity', image: '/assets/products/3.png' },
         { name: 'Eternity', image: '/assets/products/3.png' },
         { name: 'Stacking', image: '/assets/products/4.png' },
     ];
+    const [isFirstSlide, setIsFirstSlide] = useState(true);
+    const [isLastSlide, setIsLastSlide] = useState(false);
 
     return (
         <>
-            <div className="py-2 px-4 sm:px-6 lg:px-8 bg-white">
+            <div className="py-6 px-4 sm:px-6 lg:px-8 bg-white">
                 <Swiper
                     spaceBetween={10}
                     slidesPerView={4}
@@ -30,11 +33,32 @@ export default function SelectedGallary() {
                             slidesPerView: 2.5,
                         },
                         1024: {
+                            slidesPerView: 3,
+                        },
+                        1262: {
+                            slidesPerView: 3.5,
+                        },
+                        1460: {
                             slidesPerView: 4,
                         },
+                        1920: {
+                            slidesPerView: 4.5,
+                        },
+                        2092: {
+                            slidesPerView: 5,
+                        },
+                        2592: {
+                            slidesPerView: 5.5,
+                        },
+
+
                     }}
                     loop
-                    className="mySwiper"
+                    className={`mySwiper ${isFirstSlide ? 'first-slide-active' : ''} ${isLastSlide ? 'last-slide-active' : ''}`}
+                    onSlideChange={(swiper) => {
+                        setIsFirstSlide(swiper.isBeginning);
+                        setIsLastSlide(swiper.isEnd);
+                    }}
                 >
                     {categories?.map((category, index) => (
                         <SwiperSlide key={index} className="group relative cursor-pointer">

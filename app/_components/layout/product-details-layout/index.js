@@ -35,7 +35,7 @@ export default function ProductDetailsLayout({ children, images = [], productDet
                     }
                 </div>
             </div>
-            <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+            <div className="py-7 px-4 sm:px-6 lg:px-8 bg-white">
                 <SectionHeader
                     title={cards.title}
                     subtitle={cards.subtitle}

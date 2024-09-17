@@ -28,24 +28,25 @@ const OptionSelector = ({ label, options, selectedOption, onSelect, variant = 'd
     }, [selectedOption, options, onSelect]);
 
     return (
-        <div className="mb-4">
+        <div className="">
             <label className={`mb-3 block text-nowrap text-sm text-[#8E8E93] ${variant === 'second' ? 'grid grid-cols-3' : ''}`}>
-                <span>{label}</span> {selectedOption ? <span className="text-black col-span-2">{variant === 'second' ? '' : ':'} {selectedOption}</span> : null}
+                <span>{label}</span>                 {selectedOption && selectedOption !== 'Diamond Recommendations' && selectedOption !== 'Find Specific Diamond' ? <span className="text-black col-span-2">{variant === 'second' ? '' : ':'} {selectedOption}</span> : null}
+
             </label>
             {label === 'Tone' && variant === 'default' ? (
                 <div className="flex gap-2 items-center">
                     <div className={"cursor-pointer rounded-full border w-12 h-12 flex justify-center items-center " + (selectedOption === 'White Gold' ? 'border-gray-300 p-2' : 'border-transparent')} onClick={() => onSelect('White Gold')}>
-                        <div className={"cursor-pointer rounded-full border-2 p-3 w-10 h-10 flex items-center justify-center " + (selectedOption === 'WG' ? '' : 'bg-gray-200')} >
+                        <div className={"cursor-pointer rounded-full p-3 w-10 h-10 flex items-center justify-center " + (selectedOption === 'WG' ? '' : 'bg-gray-200')} >
                             WG
                         </div>
                     </div>
                     <div className={"cursor-pointer rounded-full border w-12 h-12 flex justify-center items-center " + (selectedOption === 'Red Gold' ? 'border-gray-300 p-2' : 'border-transparent')} onClick={() => onSelect('Red Gold')}>
-                        <div className={"cursor-pointer rounded-full border-2 p-3 w-10 h-10 flex items-center justify-center " + (selectedOption === 'RG' ? '' : 'bg-pink-200')} >
+                        <div className={"cursor-pointer rounded-full p-3 w-10 h-10 flex items-center justify-center " + (selectedOption === 'RG' ? '' : 'bg-pink-200')} >
                             RG
                         </div>
                     </div>
                     <div className={"cursor-pointer rounded-full border w-12 h-12 flex justify-center items-center " + (selectedOption === 'Yellow Gold' ? 'border-gray-300 p-2' : 'border-transparent')} onClick={() => onSelect('Yellow Gold')}>
-                        <div className={"cursor-pointer rounded-full border-2 p-3 w-10 h-10 flex items-center justify-center " + (selectedOption === 'YG' ? '' : 'bg-yellow-200')} >
+                        <div className={"cursor-pointer rounded-full p-3 w-10 h-10 flex items-center justify-center " + (selectedOption === 'YG' ? '' : 'bg-yellow-200')} >
                             YG
                         </div>
                     </div>

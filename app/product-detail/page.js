@@ -52,7 +52,8 @@ const productDetails = {
     engravingPlaceholder: "Enter engraving text",
     deliveryInfo: "Delivered in 2-4 weeks approx. Check your P.O. Box",
     stockInfo: "Please check again if STOCK is available for 2-3 day delivery.",
-    variant: "default"
+    variant: "default",
+    shape: "Round"
 };
 
 const cards = {

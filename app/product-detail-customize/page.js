@@ -38,8 +38,7 @@ const images = [
 const productDetails = {
     title: "Bespoke Signet Ring (gold)",
     sku: "123456789",
-    price: "2800.00",
-    originalPrice: "3000.00",
+    price: "3000.00",
     metals: ["9K Gold", "10K Gold", "18K Gold", "Silver", "Platinum"],
     tones: ["White Gold", "Yellow Gold"],
     type: ["Labl", "Diamond Recommendations"],

@@ -226,7 +226,7 @@ export default function Header() {
                     <div className="flex justify-between items-center max-w-[1760px] mx-auto w-full">
                         <div className="max-w-[120px] w-full lg:block hidden" />
 
-                        <div className={`flex-col lg:flex-row lg:flex ${isOpen ? 'fixed top-0 bottom-0 left-0 bg-white max-w-[300px] w-full border flex-col duration-300 transition-transform z-10' : ''} ${isOpen ? 'fixed top-0 bottom-0 left-0 bg-white max-w-[300px] w-full border flex-col duration-300 transition-transform z-10' : 'hidden'} lg:space-x-4`}>
+                        <div className={`flex-col lg:flex-row lg:flex ${isOpen ? 'fixed top-0 bottom-0 left-0 bg-white max-w-full w-full border flex-col duration-300 transition-transform z-10' : ''} ${isOpen ? 'fixed top-0 bottom-0 left-0 bg-white max-w-[300px] w-full border flex-col duration-300 transition-transform z-10' : 'hidden'} lg:space-x-4`}>
                             <div className="lg:hidden flex justify-between items-center px-4 mb-10">
                                 <Link href="/" className="lg:mx-auto w-fit py-4 cursor-pointer">
                                     <Image src="/assets/logo.png" alt="Logo" className="lg:max-w-max md:max-w-[120px] max-w-[100px]" width={184.3} height={78.01} />

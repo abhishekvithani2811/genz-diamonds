@@ -18,7 +18,7 @@ const images = [
 
 export default function NewArrivalProducts() {
     return (
-        <div className="lg:py-16 py-12 px-4 sm:px-6 lg:px-8 border">
+        <div className="lg:py-16 py-12 px-4 sm:px-6 lg:px-8 lg:border">
             <div className="flex flex-col-reverse md:flex-row items-center bg-[#EFF2F7] overflow-hidden">
                 <div className="md:w-1/2 p-8">
                     <h2 className="text-[#212121] text-3xl font-medium mb-4 font-freight-medium">New Arrival Products</h2>

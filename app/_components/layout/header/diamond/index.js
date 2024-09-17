@@ -27,7 +27,7 @@ export default function Diamond() {
     }
     return (
         <>
-            <div className="text-xl md:px-10 flex items-center font-futuraPT font-normal text-black">
+            <div className="text-xl md:px-10 flex items-center gap-2 font-futuraPT font-normal text-black">
                 <div>
                     Find your unique diamond
                 </div>
@@ -35,7 +35,7 @@ export default function Diamond() {
             </div>
             {underline()}
             <div className="flex justify-between md:px-10 mb-8">
-                <div className="flex sm:flex-row flex-col sm:gap-0 gap-4 w-full gap-2">
+                <div className="flex sm:flex-row flex-col sm:gap-3 gap-4 w-full">
                     <div className="lg:w-1/12">
                         <h2 className="font-futura-medium text-lg mb-4">Begin Exploring</h2>
                         <ul>
@@ -48,7 +48,7 @@ export default function Diamond() {
                         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-9 gap-4">
                             {items.map((shape, index) => (
                                 <div key={index} className="flex flex-col items-center p-4 bg-[#F9F9F9] rounded shadow-sm">
-                                    <img src={shape.icon} alt={shape.name} className="w-24 h-24 mb-2" />
+                                    <img src={shape.icon} alt={shape.name} className="w-20 h-24 mb-2" />
                                     <span className="text-sm text-gray-800">{shape.name}</span>
                                 </div>
                             ))}

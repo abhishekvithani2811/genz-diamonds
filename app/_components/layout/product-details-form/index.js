@@ -42,7 +42,7 @@ const ProductDetailsForm = ({
         cut: cut[0] ?? '',
         certificate: certificate[0] ?? '',
         type: type[0] ?? '',
-        shape: stoneSelections[0] ?? '',
+        shape: 'round' ?? '',
     });
     const underLine = ({ width }) => {
         return (

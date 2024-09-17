@@ -31,7 +31,7 @@ export default function FineJewelry({ data }) {
                                                 {subItem.icon &&
                                                     <Image src={subItem.icon} alt={subItem.name} width={24} height={24} className="mr-2 sm:w-auto w-7" />
                                                 }
-                                                <Link href="#" className="text-gray-700 font-futuraPT font-normal text-base">{subItem.name}</Link>
+                                                <Link href="#" className="text-gray-700 font-futuraPT font-normal text-sm">{subItem.name}</Link>
                                             </li>
                                         )
                                     })}
