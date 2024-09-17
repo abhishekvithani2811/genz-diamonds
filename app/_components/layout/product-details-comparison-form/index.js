@@ -81,18 +81,7 @@ const ProductDetailsComparisonForm = ({
                 selectedOption={selectedValues.stoneSelection}
                 onSelect={(stoneSelection) => setSelectedValues({ ...selectedValues, stoneSelection })}
             />
-            <div className="w-full">
-                {/* <RangeSlider
-                label="Carat"
-                min="1.5"
-                max="10"
-                step="0.1"
-                range={ranges.carat}
-                sliderType="carat"
-                handleInputChange={handleInputChange}
-                // stepCount={10}
-                labels={["Min. 1.5ct", "10.00"]}
-            /> */}
+            <div className="w-full -mt-2">
                 <RangeSlider
                     label="Colour"
                     min="0"
@@ -123,14 +112,16 @@ const ProductDetailsComparisonForm = ({
                     stepCount={4}
                     labels={["Good", "Very Good", "Excellent", "Ideal"]}
                 />
-                <div className="mb-4"></div>
-                <OptionSelector
-                    label="Certificate"
-                    options={certificate}
-                    selectedOption={selectedValues.certificate}
-                    onSelect={(certificate) => setSelectedValues({ ...selectedValues, certificate })}
-                />
-                <div className="mb-4">
+                <div className="mt-5">
+                    <OptionSelector
+                        label="Certificate"
+                        options={certificate}
+                        selectedOption={selectedValues.certificate}
+                        onSelect={(certificate) => setSelectedValues({ ...selectedValues, certificate })}
+                        className='flex-1'
+                    />
+                </div>
+                <div className="mb-4 mt-3">
                     <label className="block text-[#8E8E93] mb-2"><span className="font-futura-medium underline text-lg text-[#B4A377] font-medium">Advanced Options</span> (Optional)</label>
                 </div>
                 <Button variant="primary" className="flex-1 block w-full">Close</Button>

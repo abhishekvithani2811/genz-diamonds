@@ -54,7 +54,7 @@ const ProductDetailsForm = ({
         navigate('/check-out'); // Navigate to cart page
     };
 
-    const addEngraving = () => <div className="mb-4">
+    const addEngraving = () => <div className="mb-4 mt-3">
         <label className="block text-[#8E8E93] mb-2"><span className="font-futura-medium underline text-lg text-[#B4A377] font-normal">Add Engraving</span> <span className='opacity-75 font-futura-thin'>(Optional)</span></label>
     </div>
 
@@ -237,18 +237,20 @@ const ProductDetailsForm = ({
         <p className="text-gray-500 font-futura-medium text-lg text-[#8E8E93]">From</p>
         <PriceDisplay price={price} originalPrice={originalPrice} />
         {underLine({ width: '98%' })}
-        <OptionSelector
-            label="Metal"
-            options={metals}
-            selectedOption={selectedValues.metal}
-            onSelect={(metal) => setSelectedValues({ ...selectedValues, metal })}
-        />
-        <OptionSelector
-            label="Tone"
-            options={tones}
-            selectedOption={selectedValues.tone}
-            onSelect={(tone) => setSelectedValues({ ...selectedValues, tone })}
-        />
+        <div className='mb-4 flex flex-col gap-4'>
+            <OptionSelector
+                label="Metal"
+                options={metals}
+                selectedOption={selectedValues.metal}
+                onSelect={(metal) => setSelectedValues({ ...selectedValues, metal })}
+            />
+            <OptionSelector
+                label="Tone"
+                options={tones}
+                selectedOption={selectedValues.tone}
+                onSelect={(tone) => setSelectedValues({ ...selectedValues, tone })}
+            />
+        </div>
         {underLine({ width: '98%' })}
         <OptionSelector
             label="Stone Selection"
@@ -257,7 +259,7 @@ const ProductDetailsForm = ({
             onSelect={(stoneSelection) => setSelectedValues({ ...selectedValues, stoneSelection })}
         />
         {underLine({ width: '98%' })}
-        <div className="mb-4 grid grid-cols-3 md:grid-cols-5 gap-4">
+        <div className="mb-4 mt-1 grid grid-cols-3 md:grid-cols-5 gap-4">
             <DropdownSelector
                 label="Total Carat"
                 options={totalCarat}
@@ -296,7 +298,7 @@ const ProductDetailsForm = ({
             onSelect={(size) => setSelectedValues({ ...selectedValues, size })}
         />
         {addEngraving()}
-        <Link href="/cart">
+        <Link href="/cart" className=''>
             <Button variant="primary" className="flex-1 block w-full" onClick={handleAddToCart}>Add to Cart</Button>
         </Link>
         <p className="text-[#7A7A7A] text-base mt-4 flex items-center"><TbTruckDelivery fontSize={22} className="mr-2" />{deliveryInfo}</p>
