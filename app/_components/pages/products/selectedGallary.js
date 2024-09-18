@@ -21,7 +21,7 @@ export default function SelectedGallary() {
 
     return (
         <>
-            <div data-aos="fade-left" className="py-6 px-4 sm:px-6 lg:px-8 bg-white">
+            <div  className="py-6 px-4 sm:px-6 lg:px-8 bg-white">
                 <Swiper
                     spaceBetween={10}
                     slidesPerView={4}
@@ -62,13 +62,13 @@ export default function SelectedGallary() {
                 >
                     {categories?.map((category, index) => (
                         <SwiperSlide key={index} className="group relative cursor-pointer">
-                            <div className="w-full bg-gray-200 overflow-hidden group-hover:opacity-75 relative">
+                            <div className="w-full bg-gray-200 overflow-hidden group-hover:opacity-75 relative" data-aos="zoom-in">
                                 <Image
                                     src={category.image}
                                     alt={category.name}
                                     width={400}
                                     height={400}
-                                    className="w-full h-full object-center object-cover"
+                                    className="w-full h-full object-center object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-110"
                                 />
                                 {index === 0 && (
                                     <div className="absolute top-0 right-0 p-2">

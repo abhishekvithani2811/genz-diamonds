@@ -52,7 +52,7 @@ const OptionSelector = ({ label, options, selectedOption, onSelect, variant = 'd
                     </div>
                 </div>
             ) : variant === 'default' && label === 'Stone Selection' ? (
-                <div className="flex gap-2 flex-col md:flex-row w-[70%] md:w-full flex-wrap ">
+                <div className="flex gap-2 flex-col md:flex-row w-[70%] md:w-full flex-wrap mb-4">
                     <div className="flex gap-2 flex-col md:flex-row w-[70%] md:w-full flex-wrap ">
                         {options.map((option, index) => (
                             <button key={index} onClick={() => onSelect(option)} className={"sm:px-4 px-4 py-2 md:px-4 font-light font-futura-thin sm:text-base text-xs md:py-1 border text-nowrap " + (selectedOption === option ? 'bg-[#EBEBEB] text-black border-[#333333]' : 'border-gray-300')}>{option}</button>

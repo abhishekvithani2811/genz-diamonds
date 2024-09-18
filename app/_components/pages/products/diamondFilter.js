@@ -18,7 +18,7 @@ export default function DiamondFilter() {
                                     <Link href="/product-detail" key={item} className="flex items-center gap-2">
                                         <div className='flex flex-col items-center'>
                                             <Image src={`/assets/filterDiamond/${item}.png`} width={36} height={36} />
-                                            <span className="text-xs sm:text-sm">Lorem</span>
+                                            {/* <span className="text-xs sm:text-sm">Lorem</span> */}
                                         </div>
                                     </Link>
                                 ))}

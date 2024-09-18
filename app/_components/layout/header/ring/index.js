@@ -17,7 +17,7 @@ export default function Ring({ data }) {
                                 {subMenu.items.map((subItem, subItemIndex) => {
                                     return (
                                         <li key={subItemIndex} className="flex items-center py-1 hover:text-gray-700 gap-x-3 sm:gap-x-4">
-                                            <Image src={subItem.icon} alt={subItem.name} width={24} height={24} className="mr-2 sm:w-auto w-7" />
+                                            <Image src={subItem.icon} alt={subItem.name} width={24} height={24} className="sm:w-auto w-7" />
                                             <Link href="#" className="text-gray-700 font-futuraPT font-light text-sm">{subItem.name}</Link>
                                         </li>
                                     )

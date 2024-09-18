@@ -23,7 +23,7 @@ export default function ExploreSection() {
                 title="Explore The Range"
                 subtitle="SHOP BY CATEGORY"
             />
-            <div data-aos="fade-left" className="lg:mt-12 mt-7">
+            <div className="lg:mt-12 mt-7">
                 <Swiper
                     spaceBetween={10}
                     slidesPerView={4}
@@ -62,13 +62,17 @@ export default function ExploreSection() {
                         <SwiperSlide className="group relative cursor-pointer">
 
                             <Link href="/products" key={category.name} className="group relative cursor-pointer">
-                                <div className="w-full md:h-80 1xl:h-96 md:h-72 bg-gray-200 overflow-hidden group-hover:opacity-75">
+                                <div
+                                    className="w-full md:h-80 1xl:h-96 md:h-72 bg-gray-200 overflow-hidden group hover:opacity-75"
+                                    data-aos="zoom-in"
+                                >
                                     <img
                                         src={category.image}
                                         alt={category.name}
-                                        className="md:w-full md:h-full object-center object-cover"
+                                        className="md:w-full md:h-full object-center object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-110"
                                     />
                                 </div>
+
                                 <h3 className="mt-1 text-xl font-semibold text-gray-900" style={{ fontFamily: 'Futura PT', fontWeight: '400', lineHeight: '36px' }}>{category.name}</h3>
                             </Link  >
                         </SwiperSlide>

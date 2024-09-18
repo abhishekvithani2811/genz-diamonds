@@ -54,10 +54,10 @@ const ProductDetailsComparisonForm = ({
         certificate: certificate[0] ?? '',
     });
     const [ranges, setRanges] = useState({
+        carat: { min: 0, max: 10 },
         colour: { min: 0, max: 6 },
         clarity: { min: 0, max: 7 },
         cut: { min: 0, max: 3 },
-        carat: { min: 0, max: 10 }
     });
 
     const handleInputChange = (e, type, sliderType) => {
@@ -82,6 +82,16 @@ const ProductDetailsComparisonForm = ({
                 onSelect={(stoneSelection) => setSelectedValues({ ...selectedValues, stoneSelection })}
             />
             <div className="w-full -mt-2">
+                <RangeSlider
+                    label="Carat"
+                    min="0"
+                    max="10"
+                    range={ranges.carat}
+                    sliderType="carat"
+                    handleInputChange={handleInputChange}
+                    stepCount={2}
+                    labels={["Min. 1.5ct","Max. 10.00ct"]}
+                />
                 <RangeSlider
                     label="Colour"
                     min="0"

@@ -11,35 +11,35 @@ export default function FilterGallery() {
             id: 1,
             name: "Five Stone with Side Round...",
             price: "$2,195",
-            imageUrl: ["/assets/filterDiamond/8.png", "/assets/filterDiamond/8.png"],
+            imageUrl: ["/assets/filterDiamond/8.png", "/assets/filterDiamond/8.png","/assets/filterDiamond/8.png"],
             alt: "Five Stone Diamond Ring"
         },
         {
             id: 2,
             name: "Diamond Link Round Fashion Band",
             price: "$2,195",
-            imageUrl: ["/assets/filterDiamond/8.png", "/assets/filterDiamond/8.png"],
+            imageUrl: ["/assets/filterDiamond/8.png", "/assets/filterDiamond/8.png","/assets/filterDiamond/8.png"],
             alt: "Diamond Link Round Fashion Band"
         },
         {
             id: 3,
             name: "Alternating Round Fashion Band",
             price: "$2,195",
-            imageUrl: ["/assets/filterDiamond/8.png", "/assets/filterDiamond/8.png"],
+            imageUrl: ["/assets/filterDiamond/8.png", "/assets/filterDiamond/8.png","/assets/filterDiamond/8.png"],
             alt: "Alternating Round Fashion Band"
         },
         {
             id: 4,
             name: "Art Deco Round Fashion Band",
             price: "$2,195",
-            imageUrl: ["/assets/filterDiamond/8.png", "/assets/filterDiamond/8.png"],
+            imageUrl: ["/assets/filterDiamond/8.png", "/assets/filterDiamond/8.png","/assets/filterDiamond/8.png"],
             alt: "Art Deco Round Fashion Band"
         }
     ];
 
     return (
 
-        <div className=" px-4 sm:px-6 lg:px-8 bg-white">
+        <div className=" px-4 sm:px-6 lg:px-8 bg-white" >
             <div className="mt-6 grid gap-6 grid-cols-2 sm:grid-cols-2 lg:grid-cols-4">
                 {products.map(product => (
                     <ProductCard product={product} />

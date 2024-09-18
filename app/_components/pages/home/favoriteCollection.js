@@ -1,7 +1,7 @@
 export default function FavoriteCollection() {
     return (
-        <div className="relative bg-cover grid lg:grid-cols-2 bg-center bg-[url('https://via.placeholder.com/1200x600')]">
-            <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="relative bg-cover grid lg:grid-cols-2 bg-center bg-[url('/assets/FavoriteCollection.jpeg')]">
+            <div className="absolute inset-0  opacity-50"></div>
             <div className="lg:block hidden"></div>
             <div className="relative z-10 flex items-center justify-center h-full">
                 <div className="text-white max-w-2xl lg:py-36 md:py-20 py-10 lg:px-0 px-4">

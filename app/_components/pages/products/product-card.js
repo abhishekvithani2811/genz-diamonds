@@ -35,17 +35,17 @@ export default function ProductCard({ product }) {
 
     const handleMouseEnter = () => {
         if (swiper) {
-            swiper.autoplay.start();
+            swiper.autoplay?.start();
         }
     };
 
     const handleMouseLeave = () => {
         if (swiper) {
-            swiper.autoplay.stop();
+            swiper.autoplay?.stop();
         }
     };
     return (
-        <Link data-aos="fade-up" href="/product-detail" key={product.id} className="product-diamond">
+        <Link data-aos="zoom-in" href="/product-detail" key={product.id} className="product-diamond">
             <div className=" overflow-hidden relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                 {heartIcon()}
                 <Swiper
@@ -53,14 +53,16 @@ export default function ProductCard({ product }) {
                     spaceBetween={10}
                     slidesPerView={1}
                     navigation
-                    loop
+                    loop={false}
                     pagination={{ clickable: true }}
                     modules={[Navigation, Autoplay]}
                     className="product-image"
                 >
                     {product.imageUrl.map((url, index) => (
                         <SwiperSlide key={index}>
-                            <Image width={300} height={300} className="w-full" src={url} alt={product.alt} />
+                            <div className="group">
+                                <Image width={300} height={300} className="w-full transform transition-transform duration-300 ease-in-out group-hover:scale-110" src={url} alt={product.alt} />
+                            </div>
                         </SwiperSlide>
                     ))}
                 </Swiper>

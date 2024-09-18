@@ -14,7 +14,7 @@ export default function Stud({ data }) {
                                 {subMenu.items.map((subItem, subItemIndex) => {
                                     return (
                                         <li key={subItemIndex} className="flex items-center py-1 hover:text-gray-700 sm:gap-x-4 gap-x-3">
-                                            <Image src={subItem.icon} alt={subItem.name} width={20} height={24} className="mr-2 sm:w-auto w-7" />
+                                            <Image src={subItem.icon} alt={subItem.name} width={20} height={24} className="sm:w-auto w-7" />
                                             <Link href="#" className="text-gray-700 font-futuraPT font-normal text-sm">{subItem.name}</Link>
                                         </li>
                                     )
