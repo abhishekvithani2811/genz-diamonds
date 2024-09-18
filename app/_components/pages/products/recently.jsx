@@ -63,6 +63,7 @@ export default function RecentlyViewed() {
     <div>
       <div className="my-10">
         <p
+          data-aos="fade-up"
           className="text-center text-4xl font-medium leading-[72px]"
           style={{ fontFamily: "Freight Big Pro", fontWeight: 500 }}
         >
@@ -72,7 +73,11 @@ export default function RecentlyViewed() {
       <div className=" px-4 mb-20 sm:px-6 lg:px-8 bg-white">
         <div className="mt-6 grid gap-6 grid-cols-2 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((product) => (
-            <div key={product.id} className="  overflow-hidden relative">
+            <div
+              data-aos="fade-up"
+              key={product.id}
+              className="  overflow-hidden relative"
+            >
               {heartIcon()}
               <Image
                 width={300}

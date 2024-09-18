@@ -68,7 +68,7 @@ export default function Footer() {
     ]
 
     const MenuContent = () => AccordionContentData?.map(({ title, options }, index) => (
-        <div key={index} className={sectionClass + ' ' + mdUpClasses}>
+        <div data-aos="fade-up" key={index} className={sectionClass + ' ' + mdUpClasses}>
             <h2 className={titleClass}>{title}</h2>
             <ul className={ulClass}>
                 <OptionsContent options={options} />
@@ -84,7 +84,7 @@ export default function Footer() {
         <footer className={footerClass}>
             <div className={containerClass}>
                 <div className="flex justify-between flex-media md:flex-row flex-col md:gap-4">
-                    <div className="w-full md:max-w-[400px] pb-6 md:pb-0 px-4 border-b md:border-transparent border-gray-200">
+                    <div data-aos="fade-up" className="w-full md:max-w-[400px] pb-6 md:pb-0 px-4 border-b md:border-transparent border-gray-200">
                         <Link href="/" className="mb-2 inline-block">
                             <Image src="/assets/logo-dark.png" alt="Logo" className="lg:max-w-full md:max-w-[180px] max-w-[130px]" width={161.42} height={78} />
                         </Link>
@@ -99,10 +99,10 @@ export default function Footer() {
                         </div>
                     </div>
                     <MenuContent />
-                    <div className={mdDownClasses}>
+                    <div data-aos="fade-up" className={mdDownClasses}>
                         <AccordionContent />
                     </div>
-                    <div className="w-full max-w-[304px] px-4 md:mt-0 mt-4">
+                    <div data-aos="fade-up" className="w-full max-w-[304px] px-4 md:mt-0 mt-4">
                         <h2 className={titleClass}>Contact Us</h2>
                         <p className={`${textBaseClass} mb-4 flex justify-center flex-1`}><span className="mr-2"><LocationSvg /></span>789 A, 12th Floor, Jewel Heights, 456 Ruby Lane, Crystal View, Grand City, 67890</p>
                         <p className={`${textBaseClass} font-semibold`}>ALEX XENDER</p>

@@ -5,7 +5,7 @@ import FormInput from "../../layout/formInput";
 export default function LoginPage() {
     return (
         <div className="flex items-center justify-center min-h-[calc(100vh-160px)] bg-white sm:my-5">
-            <div className="bg-white sm:px-10 sm:py-8 px-6 py-10 shadow-login max-w-[440px] w-full border border-[#F2F2F7]">
+            <div data-aos="fade-up" className="bg-white sm:px-10 sm:py-8 px-6 py-10 shadow-login max-w-[440px] w-full border border-[#F2F2F7]">
                 <h2 className="text-2xl font-semibold md:mb-8 mb-6 text-center text-[#333333] md:text-[32px]">Log in or sign up</h2>
                 <form>
                     <FormInput name="email" label="Email" />

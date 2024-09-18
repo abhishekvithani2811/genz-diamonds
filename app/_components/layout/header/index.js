@@ -219,10 +219,10 @@ export default function Header() {
         <header className={`bg-white text-black sticky top-0 z-[11] ${activeMegaMenu ? 'lg:sticky' : 'lg:static'}`}>
             {isOpen ? <div className="fixed top-0 bottom-0 right-0 left-0 bg-black/30" onClick={() => setIsOpen(false)} /> : null}
             <div className="flex lg:flex-col flex-row lg:justify-center justify-between lg:px-0 px-4">
-                <Link href="/" className="lg:mx-auto w-fit py-4 cursor-pointer">
+                <Link data-aos="fade-down" href="/" className="lg:mx-auto w-fit py-4 cursor-pointer">
                     <Image src="/assets/logo.png" alt="Logo" className="lg:max-w-[80%] md:max-w-[120px] max-w-[100px]" width={184.3} height={70.01} />
                 </Link>
-                <div className="flex justify-between items-center lg:border-2 border-[#f8f6f4a3]">
+                <div data-aos="fade-down" className="flex justify-between items-center lg:border-2 border-[#f8f6f4a3]">
                     <div className="flex justify-between items-center max-w-[1760px] mx-auto w-full">
                         <div className="max-w-[120px] w-full lg:block hidden" />
 
@@ -237,7 +237,7 @@ export default function Header() {
                             </div>
                             {navContent}
                         </div>
-                        <div className="flex items-center justify-center space-x-4 lg:max-w-[120px] lg:w-full">
+                        <div data-aos="fade-left" className="flex items-center justify-center space-x-4 lg:max-w-[120px] lg:w-full">
                             <Link href="#" className="hover:text-gray-700"><FiSearch fontSize={24} /></Link>
                             <Link href="#" className="hover:text-gray-700"><AiOutlineUser fontSize={24} /></Link>
                             <Link href="#" className="hover:text-gray-700"><CartSvg /></Link>

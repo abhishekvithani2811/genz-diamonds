@@ -7,7 +7,7 @@ export default function CompareTable({ data = [], handleRemove = () => { } }) {
 
     return (
         <div className="overflow-x-auto col-span-3 bg-white">
-            <table className="min-w-full border bg-white text-[#292929] 3xl:text-base text-sm text-nowrap">
+            <table data-aos="fade-left" className="min-w-full border bg-white text-[#292929] 3xl:text-base text-sm text-nowrap">
                 <thead>
                     <tr>
                         <th className="sticky-left border py-2 px-2 z-[10]"></th>

@@ -1,3 +1,4 @@
+import AOSInit from "./_components/aos";
 import Footer from "./_components/layout/footer";
 import Header from "./_components/layout/header";
 import "./globals.css";
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
+        <AOSInit />
       </body>
     </html>
   );

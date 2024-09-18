@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function BannerSection() {
     return (
         <div className="flex flex-col relative bg-white">
-            <Image src="/assets/bg-banner.jpg" alt="image" className="w-full h-full object-cover lg:min-h-min min-h-[300px] object-left" width={1920} height={600} />
-            <div className="2xl:max-w-[50%] 1xl:max-w-[886px] lg:max-w-[650px] w-full clip-shape lg:bg-[#b4a377] lg:min-h-[400px] flex lg:absolute top-0 right-0 bottom-0">
+            <Image data-aos="fade-right" src="/assets/bg-banner.jpg" alt="image" className="w-full h-full object-cover lg:min-h-min min-h-[300px] object-left" width={1920} height={600} />
+            <div data-aos="fade-left" className="2xl:max-w-[50%] 1xl:max-w-[886px] lg:max-w-[650px] w-full clip-shape lg:bg-[#b4a377] lg:min-h-[400px] flex lg:absolute top-0 right-0 bottom-0">
                 <div className="lg:flex flex-col justify-center 2xl:max-w-[65%] 1xl:max-w-[585px] 1xl:pl-0 lg:pl-[130px] lg:ml-auto 2xl:mr-10 1xl:mr-14 pl-4 pt-10 pr-4">
                     <h1 className="3xl:text-5xl 1xl:text-4xl text-3xl font-serif font-normal lg:text-white text-[#b4a377]">Diamonds That Deserve You.</h1>
                     <p className="mt-4 3xl:text-2xl 1xl:text-lg text-base font-futura-light lg:text-white text-[#b4a377]">

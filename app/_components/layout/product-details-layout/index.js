@@ -16,18 +16,18 @@ export default function ProductDetailsLayout({ children, images = [], productDet
                 <div className="w-full col-span-4 bg-white">
                     <div className="flex flex-col lg:flex-row">
                         {/* Product Images */}
-                        <div className="w-full lg:w-1/2">
+                        <div data-aos="fade-right" className="w-full lg:w-1/2">
                             <img src="/assets/compare/3.png" alt="Product Image" className="w-full h-auto object-cover border mb-4" />
                             <ImageCarousel images={images} />
                         </div>
                         {/* Product Details */}
-                        <div className="w-full lg:w-1/2 lg:pl-6">
+                        <div data-aos="fade-down" className="w-full lg:w-1/2 lg:pl-6">
                             <ProductDetailsForm {...productDetails} />
                         </div>
                     </div>
                 </div>
                 {/* Right Column */}
-                <div className="w-full bg-[#F2F2F7] p-6 mt-6 lg:mt-0">
+                <div data-aos="fade-left" className="w-full bg-[#F2F2F7] p-6 mt-6 lg:mt-0">
                     {
                         SIDE_DATA.map((item, index) => (
                             <InfoSection key={index} title={item.title} buttons={item.buttons} />

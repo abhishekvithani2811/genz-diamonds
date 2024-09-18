@@ -5,7 +5,7 @@ import { AiOutlineAppstore, AiOutlineMenu } from 'react-icons/ai';
 
 const ComparisonHeader = ({ selected, setIsComparison }) => {
     return (
-        <div className="flex items-center justify-between p-4 gap-x-4 bg-gray-100 border-b border-dashed border-gray-300">
+        <div data-aos="fade-down" className="flex items-center justify-between p-4 gap-x-4 bg-gray-100 border-b border-dashed border-gray-300">
             <div className="flex items-center gap-x-2 relative w-fit">
                 <FiSearch color="#8E8E93" fontSize={18} className="text-gray-500 absolute top-50 xl:left-5 left-4" />
                 <input

@@ -28,7 +28,7 @@ export default function ProductDetailCompare() {
             <ComparisonHeader selected={selected?.map((item) => item.id)} setIsComparison={comparisonToggle} />
 
             {
-                isComparison ? <div className="p-4 pb-0 flex justify-end"> <Button variant="primary" onClick={comparisonToggle} className="" >Close</Button>  </div> : null
+                isComparison ? <div data-aos="fade-left" className="p-4 pb-0 flex justify-end"> <Button variant="primary" onClick={comparisonToggle} className="" >Close</Button>  </div> : null
             }
 
             <ComparisonLayout isComparison={isComparison} selected={selected?.map((item) => item.id)} setSelected={handleCheckBox} />

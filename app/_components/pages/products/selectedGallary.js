@@ -21,7 +21,7 @@ export default function SelectedGallary() {
 
     return (
         <>
-            <div className="py-6 px-4 sm:px-6 lg:px-8 bg-white">
+            <div data-aos="fade-left" className="py-6 px-4 sm:px-6 lg:px-8 bg-white">
                 <Swiper
                     spaceBetween={10}
                     slidesPerView={4}

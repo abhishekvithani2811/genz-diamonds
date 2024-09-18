@@ -45,7 +45,7 @@ export default function ProductCard({ product }) {
         }
     };
     return (
-        <Link href="/product-detail" key={product.id} className="product-diamond">
+        <Link data-aos="fade-up" href="/product-detail" key={product.id} className="product-diamond">
             <div className=" overflow-hidden relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                 {heartIcon()}
                 <Swiper

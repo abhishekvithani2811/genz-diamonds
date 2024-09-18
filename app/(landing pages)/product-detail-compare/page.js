@@ -60,11 +60,11 @@ const DiamondList = () => {
         <div className="py-4">
             <div className="grid grid-cols-1 lg:grid-cols-6 gap-2 relative">
                 {/* Left Column */}
-                <div className="col-span-3 overflow-hidden bg-[#F2F2F7] lg:order">
+                <div data-aos="fade-right" className="col-span-3 overflow-hidden bg-[#F2F2F7] lg:order">
                     <ProductDetailCompare />
                 </div>
                 {/* Product Details */}
-                <div className="col-span-2 relative xl:p-0 p-3">
+                <div data-aos="fade-up" className="col-span-2 relative xl:p-0 p-3">
                     <ProductDetailsComparisonForm {...productDetails} />
                 </div>
 

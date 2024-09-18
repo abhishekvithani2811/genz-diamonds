@@ -23,7 +23,7 @@ export default function ExploreSection() {
                 title="Explore The Range"
                 subtitle="SHOP BY CATEGORY"
             />
-            <div className="lg:mt-12 mt-7">
+            <div data-aos="fade-left" className="lg:mt-12 mt-7">
                 <Swiper
                     spaceBetween={10}
                     slidesPerView={4}
@@ -38,7 +38,7 @@ export default function ExploreSection() {
                             slidesPerView: 3,
                         },
                         1262: {
-                            slidesPerView: 3.5, 
+                            slidesPerView: 3.5,
                         },
                         1460: {
                             slidesPerView: 4,
@@ -52,7 +52,7 @@ export default function ExploreSection() {
                         2592: {
                             slidesPerView: 5.5,
                         },
-                        
+
 
                     }}
                     loop

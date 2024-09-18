@@ -78,6 +78,7 @@ body {
   color: var(--foreground);
   background-color: var(--background);
   font-family: "Futura PT Medium";
+  overflow-x: hidden;
 }
 
 footer {
