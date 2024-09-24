@@ -186,7 +186,7 @@ export default function Header() {
         {navItems.map((item, index) => {
             const navClasses = `hover:text-gray-700 ${index === 0 ? 'b' : ''} border-black/15 hover:underline hover:underline-offset-4 hover:decoration-[#BD9851] hover:text-[#BD9851] text-[#212121] lg:py-4 py-2 px-4 sm:text-base text-3xl text-center block sm:capitalize uppercase font-futura-thin font-normal cursor-pointer`
             return (
-                <div className="group relative" onMouseEnter={() => Boolean(subMenuItems[item.href]) ? setActiveMegaMenu(item.href) : null} onMouseLeave={() => Boolean(subMenuItems[item.href]) ? setActiveMegaMenu(null) : null}>
+                <div key={index} className="group relative" onMouseEnter={() => Boolean(subMenuItems[item.href]) ? setActiveMegaMenu(item.href) : null} onMouseLeave={() => Boolean(subMenuItems[item.href]) ? setActiveMegaMenu(null) : null}>
                     {
                         Boolean(subMenuItems[item.href]) ? <div key={index} onClick={() => setIsMegaMenu(item.href)} className={navClasses}>
                             {item.label}

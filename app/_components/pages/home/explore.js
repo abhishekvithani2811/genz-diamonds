@@ -58,8 +58,8 @@ export default function ExploreSection() {
                     loop
                     className="mySwiper"
                 >
-                    {categories.map((category) => (
-                        <SwiperSlide className="group relative cursor-pointer">
+                    {categories.map((category, i) => (
+                        <SwiperSlide key={i} className="group relative cursor-pointer">
 
                             <Link href="/products" key={category.name} className="group relative cursor-pointer">
                                 <div

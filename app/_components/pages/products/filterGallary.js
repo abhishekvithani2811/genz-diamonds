@@ -11,28 +11,28 @@ export default function FilterGallery() {
             id: 1,
             name: "Five Stone with Side Round...",
             price: "$2,195",
-            imageUrl: ["/assets/filterDiamond/8.png", "/assets/filterDiamond/8.png","/assets/filterDiamond/8.png"],
+            imageUrl: ["/assets/filterDiamond/8.png", "/assets/filterDiamond/8.png", "/assets/filterDiamond/8.png"],
             alt: "Five Stone Diamond Ring"
         },
         {
             id: 2,
             name: "Diamond Link Round Fashion Band",
             price: "$2,195",
-            imageUrl: ["/assets/filterDiamond/8.png", "/assets/filterDiamond/8.png","/assets/filterDiamond/8.png"],
+            imageUrl: ["/assets/filterDiamond/8.png", "/assets/filterDiamond/8.png", "/assets/filterDiamond/8.png"],
             alt: "Diamond Link Round Fashion Band"
         },
         {
             id: 3,
             name: "Alternating Round Fashion Band",
             price: "$2,195",
-            imageUrl: ["/assets/filterDiamond/8.png", "/assets/filterDiamond/8.png","/assets/filterDiamond/8.png"],
+            imageUrl: ["/assets/filterDiamond/8.png", "/assets/filterDiamond/8.png", "/assets/filterDiamond/8.png"],
             alt: "Alternating Round Fashion Band"
         },
         {
             id: 4,
             name: "Art Deco Round Fashion Band",
             price: "$2,195",
-            imageUrl: ["/assets/filterDiamond/8.png", "/assets/filterDiamond/8.png","/assets/filterDiamond/8.png"],
+            imageUrl: ["/assets/filterDiamond/8.png", "/assets/filterDiamond/8.png", "/assets/filterDiamond/8.png"],
             alt: "Art Deco Round Fashion Band"
         }
     ];
@@ -41,16 +41,16 @@ export default function FilterGallery() {
 
         <div className=" px-4 sm:px-6 lg:px-8 bg-white" >
             <div className="mt-6 grid gap-6 grid-cols-2 sm:grid-cols-2 lg:grid-cols-4">
-                {products.map(product => (
-                    <ProductCard product={product} />
+                {products.map((product, i) => (
+                    <ProductCard key={i} product={product} />
                 ))}
             </div>
             <div className=" bg-white">
                 <div className="mt-6 lg:grid gap-6 grid-cols-1 sm:grid-cols-1 lg:grid-cols-1">
                     <div className="lg:grid lg:grid-cols-4">
                         <div className="col-span-2 grid grid-cols-2 gap-6">
-                            {products.map(product => (
-                                <ProductCard product={product} />
+                            {products.map((product, i) => (
+                                <ProductCard key={i} product={product} />
                             ))}
                         </div>
                         <div data-aos="fade-left" className="col-span-2 relative flex justify-center pb-2 sm:px-3">
@@ -61,8 +61,8 @@ export default function FilterGallery() {
                 </div>
             </div>
             <div className="mt-6 grid gap-6 grid-cols-2 sm:grid-cols-2 lg:grid-cols-4">
-                {products.map(product => (
-                    <ProductCard product={product} />
+                {products.map((product, i) => (
+                    <ProductCard key={i} product={product} />
                 ))}
             </div>
         </div>
