@@ -8,6 +8,7 @@ import OptionSelector from './option-selector';
 import DropdownSelector from './dropdown-selector';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const ProductDetailsForm = ({
     title,
@@ -301,7 +302,8 @@ const ProductDetailsForm = ({
         <Link href="/cart" className=''>
             <Button variant="primary" className="flex-1 block w-full" onClick={handleAddToCart}>Add to Cart</Button>
         </Link>
-        <p className="text-[#7A7A7A] text-base mt-4 flex items-center"><TbTruckDelivery fontSize={22} className="mr-2" />{deliveryInfo}</p>
+        <p className="text-[#7A7A7A] text-base mt-4 flex items-center"><Image src="/assets/products/6.svg" alt="Product Image" width={24} height={24} className='mr-2' />
+            {deliveryInfo}</p>
         <p className="text-[#7A7A7A] text-base mt-1">{stockInfo}</p>
     </div>;
 };

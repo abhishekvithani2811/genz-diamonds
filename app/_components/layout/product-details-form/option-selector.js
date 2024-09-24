@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/navigation'
 
-const OptionSelector = ({ label, options, selectedOption, onSelect, variant = 'default', className = "" }) => {
+const OptionSelector = ({ label, options, selectedOption, onSelect, variant = 'default' }) => {
     const router = useRouter()
     const underLine = ({ width }) => {
         return (
@@ -28,7 +28,7 @@ const OptionSelector = ({ label, options, selectedOption, onSelect, variant = 'd
     }, [selectedOption, options, onSelect]);
 
     return (
-        <div className="">
+        <div className="mb-4">
             <label className={`mb-3 block text-nowrap text-sm text-[#8E8E93] ${variant === 'second' ? 'grid grid-cols-3' : ''}`}>
                 <span>{label}</span>                 {selectedOption && selectedOption !== 'Diamond Recommendations' && selectedOption !== 'Find Specific Diamond' ? <span className="text-black col-span-2">{variant === 'second' ? '' : ':'} {selectedOption}</span> : null}
 
@@ -36,23 +36,23 @@ const OptionSelector = ({ label, options, selectedOption, onSelect, variant = 'd
             {label === 'Tone' && variant === 'default' ? (
                 <div className="flex gap-2 items-center">
                     <div className={"cursor-pointer rounded-full border w-12 h-12 flex justify-center items-center " + (selectedOption === 'White Gold' ? 'border-gray-300 p-2' : 'border-transparent')} onClick={() => onSelect('White Gold')}>
-                        <div className={"cursor-pointer rounded-full p-3 w-10 h-10 flex items-center justify-center " + (selectedOption === 'WG' ? '' : 'bg-gray-200')} >
+                        <div className={"cursor-pointer rounded-full border-2 p-3 w-10 h-10 flex items-center justify-center " + (selectedOption === 'WG' ? '' : 'bg-gray-200')} >
                             WG
                         </div>
                     </div>
                     <div className={"cursor-pointer rounded-full border w-12 h-12 flex justify-center items-center " + (selectedOption === 'Red Gold' ? 'border-gray-300 p-2' : 'border-transparent')} onClick={() => onSelect('Red Gold')}>
-                        <div className={"cursor-pointer rounded-full p-3 w-10 h-10 flex items-center justify-center " + (selectedOption === 'RG' ? '' : 'bg-pink-200')} >
+                        <div className={"cursor-pointer rounded-full border-2 p-3 w-10 h-10 flex items-center justify-center " + (selectedOption === 'RG' ? '' : 'bg-pink-200')} >
                             RG
                         </div>
                     </div>
                     <div className={"cursor-pointer rounded-full border w-12 h-12 flex justify-center items-center " + (selectedOption === 'Yellow Gold' ? 'border-gray-300 p-2' : 'border-transparent')} onClick={() => onSelect('Yellow Gold')}>
-                        <div className={"cursor-pointer rounded-full p-3 w-10 h-10 flex items-center justify-center " + (selectedOption === 'YG' ? '' : 'bg-yellow-200')} >
+                        <div className={"cursor-pointer rounded-full border-2 p-3 w-10 h-10 flex items-center justify-center " + (selectedOption === 'YG' ? '' : 'bg-yellow-200')} >
                             YG
                         </div>
                     </div>
                 </div>
             ) : variant === 'default' && label === 'Stone Selection' ? (
-                <div className="flex gap-2 flex-col md:flex-row w-[70%] md:w-full flex-wrap mb-4">
+                <div className="flex gap-2 flex-col md:flex-row w-[70%] md:w-full flex-wrap ">
                     <div className="flex gap-2 flex-col md:flex-row w-[70%] md:w-full flex-wrap ">
                         {options.map((option, index) => (
                             <button key={index} onClick={() => onSelect(option)} className={"sm:px-4 px-4 py-2 md:px-4 font-light font-futura-thin sm:text-base text-xs md:py-1 border text-nowrap " + (selectedOption === option ? 'bg-[#EBEBEB] text-black border-[#333333]' : 'border-gray-300')}>{option}</button>
@@ -62,7 +62,7 @@ const OptionSelector = ({ label, options, selectedOption, onSelect, variant = 'd
             ) : variant === 'default' ? (
                 <div className="flex gap-2 flex-wrap items-center">
                     {options.map((option, index) => (
-                        <button key={index} onClick={() => onSelect(option)} className={"sm:px-4 px-4 py-2 md:px-4 font-light font-futura-thin sm:text-base text-xs md:py-1 border text-nowrap " + ` ${className} ` + (selectedOption === option ? 'bg-[#EBEBEB] text-black border-[#333333]' : 'border-gray-300')}>{option}</button>
+                        <button key={index} onClick={() => onSelect(option)} className={"sm:px-4 px-4 py-2 md:px-4 font-light font-futura-thin sm:text-base text-xs md:py-1 border text-nowrap " + (selectedOption === option ? 'bg-[#EBEBEB] text-black border-[#333333]' : 'border-gray-300')}>{option}</button>
                     ))}
                     {variant === 'default' && label === 'Size' ? <label className="block text-[#525252] text-sm ml-2"><span className="font-futura-medium underline text-sm font-medium">Show more sizes</span></label> : null}
                 </div>

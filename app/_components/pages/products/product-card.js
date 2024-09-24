@@ -12,12 +12,12 @@ const colorSelection = () => {
         <>
             <div className="pr-6 mb-2 flex items-center space-x-2">
                 <span className="text-sm text-[#8E8E93] ">Metal</span>
-                <button className="sm:w-6 sm:h-6 w-5 h-5 -full border-2 border-gray-300 flex items-center justify-center rounded-full">
-                    <span className="text-xs">PT</span>
-                </button>
-                <span className="w-3 h-3 sm:w-6  sm:h-6 -full bg-yellow-200 rounded-full"></span>
-                <span className="w-3 h-3 sm:w-6 sm:h-6 -full bg-yellow-300 rounded-full"></span>
-                <span className="w-3 h-3 sm:w-6 sm:h-6 -full bg-yellow-400 rounded-full"></span>
+                <button className="cursor-pointer rounded-full border  w-5 h-5 flex justify-center items-center border-gray-300 p-4">
+                        <div className="cursor-pointer rounded-full border-2 h-5 w-5 flex items-center p-1  text-sm justify-center bg-gray-200">PT</div>
+                    </button>
+                <span className="w-3 h-3 sm:w-6  sm:h-6 -full bg-[#E5CE83] rounded-full"></span>
+                <span className="w-3 h-3 sm:w-6 sm:h-6 -full bg-[#E7BA9A] rounded-full"></span>
+                <span className="w-3 h-3 sm:w-6 sm:h-6 -full bg-[#E7BA9A] rounded-full"></span>
             </div>
         </>
     )
@@ -71,7 +71,7 @@ export default function ProductCard({ product }) {
                         fontFamily: 'Futura PT',
                         fontWeight: '400',
                     }}>{product.name}</div>
-                    <p className="text-[#8E8E93] text-sm sm:font-bold">
+                    <p className="text-[#8E8E93] ">
                         From {product.price}
                     </p>
                 </div>

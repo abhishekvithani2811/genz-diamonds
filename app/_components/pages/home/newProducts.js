@@ -31,6 +31,11 @@ export default function NewArrivalProducts() {
                     <Swiper
                         spaceBetween={10}
                         slidesPerView={1.5}
+                        autoplay={{
+                            delay: 500,
+                            disableOnInteraction: false,
+                            pauseOnMouseEnter: false
+                        }}
                         breakpoints={{
                             0: {
                                 slidesPerView: 1,
@@ -38,10 +43,11 @@ export default function NewArrivalProducts() {
                             1024: {
                                 slidesPerView: 2.5,
                             },
+                            1920: {
+                                slidesPerView: 3,
+                            },
                         }}
                         loop
-                        navigation={true}
-                        modules={[Navigation]}
                         className="mySwiper"
                     >
                         {

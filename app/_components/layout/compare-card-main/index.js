@@ -46,7 +46,7 @@ export default function CompareCardMain({ handleCheck, selected = false }) {
                 </div>
                 <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center bg-[#F2F2F7] p-2 cursor-pointer" onChange={handleCheck}>
-                        <input type="checkbox" className="mr-2" checked={selected} />
+                        <input type="checkbox" className="mr-2" checked={selected} style={{ accentColor: 'black' }}/>
                         <label htmlFor="compare" className="text-sm">Compare</label>
                     </div>
                     <div className="text-lg font-semibold">£ 599.48</div>
