@@ -31,7 +31,7 @@ const ProductDetailsForm = ({
     variant = 'default'
 }) => {
     const navigate = useRouter(); // Initialize navigate function
-
+    const [isOpen, setIsOpen] = useState(false)
     const [selectedValues, setSelectedValues] = useState({
         metal: metals[0] ?? '',
         tone: tones[0] ?? '',
@@ -55,8 +55,10 @@ const ProductDetailsForm = ({
         navigate('/check-out'); // Navigate to cart page
     };
 
-    const addEngraving = () => <div className="mb-4 mt-3">
-        <label className="block text-[#8E8E93] mb-2"><span className="font-futura-medium underline text-lg text-[#B4A377] font-normal">Add Engraving</span> <span className='opacity-75 font-futura-thin'>(Optional)</span></label>
+    const addEngraving = () => <div className="mb-4 mt-3"><div >
+        <label className="block text-[#8E8E93] mb-2" onClick={() => setIsOpen(!isOpen)}><span className="font-futura-medium underline text-lg text-[#B4A377] font-normal">Add Engraving</span> <span className='opacity-75 font-futura-thin'>(Optional)</span></label>
+    </div>
+        {isOpen ? <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Add Engraving" required /> : null}
     </div>
 
     return variant === 'second' ? (
@@ -123,13 +125,13 @@ const ProductDetailsForm = ({
                 />
             </div>
             <hr className="border-t border-dashed border-gray-300 my-4" />
-            <div className="grid grid-cols-2 gap-4">
-                <h1 className="text-lg font-medium font-futura-medium">Stone</h1>
+            <div className="grid grid-cols-2 gap-2 items-center  flex-wrap">
+                <h1 className="text-lg font-medium font-futura-medium">Metal Detail</h1>
                 <div className='flex items-center gap-x-4 justify-between'>
-                    <h1 className="text-lg font-medium font-futura-medium">Stone</h1>
+                    <h1 className="text-lg font-medium font-futura-medium">Stone Detail</h1>
                     <a href="#" className="text-[#B4A377] underline text-sm block">Find a Specific Diamond</a>
                 </div>
-                <OptionSelector
+                {/* <OptionSelector
                     label="Type"
                     options={type}
                     selectedOption={selectedValues.type}
@@ -142,7 +144,7 @@ const ProductDetailsForm = ({
                     selectedOption={selectedValues.type}
                     variant={variant}
                     onSelect={(type) => setSelectedValues({ ...selectedValues, type })}
-                />
+                /> */}
                 <OptionSelector
                     label="Shape"
                     options={stoneSelections}
@@ -260,7 +262,7 @@ const ProductDetailsForm = ({
             onSelect={(stoneSelection) => setSelectedValues({ ...selectedValues, stoneSelection })}
         />
         {underLine({ width: '98%' })}
-        <div className="mb-4 mt-1 grid grid-cols-3 md:grid-cols-5 gap-4">
+        <div className="mb-4 mt-2 grid grid-cols-3 md:grid-cols-5 gap-4">
             <DropdownSelector
                 label="Total Carat"
                 options={totalCarat}

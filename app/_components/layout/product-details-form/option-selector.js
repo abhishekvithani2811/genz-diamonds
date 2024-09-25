@@ -28,8 +28,8 @@ const OptionSelector = ({ label, options, selectedOption, onSelect, variant = 'd
     }, [selectedOption, options, onSelect]);
 
     return (
-        <div className="mb-4">
-            <label className={`mb-3 block text-nowrap text-sm text-[#8E8E93] ${variant === 'second' ? 'grid grid-cols-3' : ''}`}>
+        <div className="">
+            <label className={`block text-nowrap sm:text-base text-sm text-[#212121] ${variant === 'second' ? 'grid grid-cols-3' : ''}`}>
                 <span>{label}</span>                 {selectedOption && selectedOption !== 'Diamond Recommendations' && selectedOption !== 'Find Specific Diamond' ? <span className="text-black col-span-2">{variant === 'second' ? '' : ':'} {selectedOption}</span> : null}
 
             </label>
@@ -52,10 +52,10 @@ const OptionSelector = ({ label, options, selectedOption, onSelect, variant = 'd
                     </div>
                 </div>
             ) : variant === 'default' && label === 'Stone Selection' ? (
-                <div className="flex gap-2 flex-col md:flex-row w-[70%] md:w-full flex-wrap ">
-                    <div className="flex gap-2 flex-col md:flex-row w-[70%] md:w-full flex-wrap ">
+                <div className="flex gap-2 flex-col md:flex-row sm:w-[70%] md:w-full flex-wrap ">
+                    <div className="flex gap-2 md:flex-row sm:w-[70%] md:w-full">
                         {options.map((option, index) => (
-                            <button key={index} onClick={() => onSelect(option)} className={"sm:px-4 px-4 py-2 md:px-4 font-light font-futura-thin sm:text-base text-xs md:py-1 border text-nowrap " + (selectedOption === option ? 'bg-[#EBEBEB] text-black border-[#333333]' : 'border-gray-300')}>{option}</button>
+                            <button key={index} onClick={() => onSelect(option)} className={"sm:px-4 px-2 py-2 md:px-4 font-light font-futura-thin sm:text-base text-xs md:py-1 border text-nowrap " + (selectedOption === option ? 'bg-[#EBEBEB] text-black border-[#333333]' : 'border-gray-300')}>{option}</button>
                         ))}
                     </div>
                 </div>
@@ -64,7 +64,7 @@ const OptionSelector = ({ label, options, selectedOption, onSelect, variant = 'd
                     {options.map((option, index) => (
                         <button key={index} onClick={() => onSelect(option)} className={"sm:px-4 px-4 py-2 md:px-4 font-light font-futura-thin sm:text-base text-xs md:py-1 border text-nowrap " + (selectedOption === option ? 'bg-[#EBEBEB] text-black border-[#333333]' : 'border-gray-300')}>{option}</button>
                     ))}
-                    {variant === 'default' && label === 'Size' ? <label className="block text-[#525252] text-sm ml-2"><span className="font-futura-medium underline text-sm font-medium">Show more sizes</span></label> : null}
+                    {variant === 'default' && label === 'Size' ? <label className="block text-[#525252] sm:text-base text-sm ml-2"><span className="font-futura-medium underline sm:text-base text-sm font-medium">Show more sizes</span></label> : null}
                 </div>
             ) : null}
         </div>

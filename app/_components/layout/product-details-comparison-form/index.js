@@ -15,7 +15,7 @@ const RangeSlider = ({ label, min, max, step, range, sliderType, handleInputChan
                 step={step}
                 value={range.min}
                 onChange={(e) => handleInputChange(e, 'min', sliderType)}
-                className="slider appearance-none bg-gray-700"
+                className={`slider appearance-none bg-gray-700 ${range.max == max && range.min == range.max ? 'z-[10]' : ''}`}
                 id={`sliderMin${sliderType}`}
             />
             <input
@@ -90,7 +90,7 @@ const ProductDetailsComparisonForm = ({
                     sliderType="carat"
                     handleInputChange={handleInputChange}
                     stepCount={2}
-                    labels={["Min. 1.5ct","Max. 10.00ct"]}
+                    labels={["Min. 1.5ct", "Max. 10.00ct"]}
                 />
                 <RangeSlider
                     label="Colour"

@@ -8,13 +8,12 @@ import RecentlyViewed from './recently';
 
 export default function ProductLisingPage() {
     return (
-        <>
+        <div className='relative'>
             <MenuBar />
             <SelectedGallary />
             <DiamondFilter />
-            <hr />
             <FilterGallary />
             <RecentlyViewed />
-        </>
+        </div>
     )
 }

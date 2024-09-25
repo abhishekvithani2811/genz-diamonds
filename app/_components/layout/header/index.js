@@ -4,7 +4,7 @@ import { FiSearch } from "react-icons/fi";
 import { AiOutlineUser } from "react-icons/ai";
 import CartSvg from "../../../../public/assets/cartSvg";
 import Link from 'next/link';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
@@ -182,6 +182,18 @@ export default function Header() {
         setIsMegaMenu(null)
     }
 
+
+    useEffect(() => {
+        if (activeMegaMenu) {
+            document.body.style.overflow = 'hidden'; // Disable scrolling
+        } else {
+            document.body.style.overflow = 'auto'; // Enable scrolling
+        }
+        return () => {
+            document.body.style.overflow = 'auto'; // Clean up on unmount
+        };
+    }, [activeMegaMenu]);
+
     const navContent = <nav className={`flex lg:flex-row w-full ${setIsOpen ? 'flex-col' : 'hidden'}`}>
         {navItems.map((item, index) => {
             const navClasses = `hover:text-gray-700 ${index === 0 ? 'b' : ''} border-black/15 hover:underline hover:underline-offset-4 hover:decoration-[#BD9851] hover:text-[#BD9851] text-[#212121] lg:py-4 py-2 px-4 sm:text-base text-3xl text-center block sm:capitalize uppercase font-futura-thin font-normal cursor-pointer`
@@ -216,7 +228,7 @@ export default function Header() {
         })}
     </nav >
     return (
-        <header className={`bg-white text-black sticky top-0 z-[11] ${activeMegaMenu ? 'lg:sticky' : 'lg:static'}`}>
+        <header className={`bg-white text-black sticky top-0 z-[11] ${activeMegaMenu ? 'lg:static' : 'lg:static'}`}>
             {isOpen ? <div className="fixed top-0 bottom-0 right-0 left-0 bg-black/30" onClick={() => setIsOpen(false)} /> : null}
             <div className="flex lg:flex-col flex-row lg:justify-center justify-between lg:px-0 px-4">
                 <Link data-aos="fade-down" href="/" className="lg:mx-auto w-fit py-4 cursor-pointer">
