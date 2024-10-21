@@ -41,6 +41,7 @@ export default function Diamond() {
                         <ul>
                             <li className="mb-2 font-futura-thin text-sm bg-[#F9F9F9] p-2">Certified</li>
                             <li className="font-futura-thin text-sm p-2">Pairs</li>
+
                         </ul>
                     </div>
                     <div className="lg:w-11/12">
